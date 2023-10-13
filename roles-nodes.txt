@@ -1,0 +1,15 @@
+Nodos con rol role_0:
+Iceland, Norway, Ireland, Faroe Islands, Croatia, Libya, Uganda, Bulgaria, Slovakia, Cyprus, Montenegro, Slovenia, Estonia, Romania, Macedonia, Bosnia and Herzegovina, Albania, Moldova, Guernsey, Jersey, Tajikistan, Isle of Man, Saint Helena, Armenia, Afghanistan, Kyrgyzstan, Northern Mariana Islands, Mongolia, North Korea, 
+
+Nodos con rol role_1:
+Australia, Hong Kong, Japan, Singapore, China, Denmark, Finland, Netherlands, Sweden, United States, Belgium, France, Germany, United Kingdom, Canada, Switzerland, Spain, Hungary, Poland, Latvia, Austria, Lithuania, Czech Republic, Jordan, United Arab Emirates, Dominican Republic, Cuba, Mexico, Italy, South Korea, Turkey, Israel, Morocco, Taiwan, Ethiopia, Egypt, Qatar, Portugal, Russia, Saudi Arabia, Greece, India, Ukraine, Lebanon, Malta, Thailand, Georgia, Belarus, 
+
+Nodos con rol role_2:
+Papua New Guinea, Solomon Islands, Micronesia, Greenland, Aruba, Cayman Islands, Grenada, Turks and Caicos Islands, Guyana, Belize, Saint Kitts and Nevis, Mali, Niger, Burkina Faso, Benin, Gabon, Cameroon, Congo (Brazzaville), Guinea, Sierra Leone, Liberia, Gambia, Sao Tome and Principe, Congo (Kinshasa), Chad, Sudan, Rwanda, Burundi, Falkland Islands, Zimbabwe, Zambia, Suriname, Botswana, Malawi, Madagascar, Mozambique, Lesotho, Swaziland, Reunion, Central African Republic, Comoros, Mayotte, Guinea-Bissau, Guatemala, Honduras, Somalia, South Sudan, Yemen, Eritrea, Syria, French Guiana, British Virgin Islands, Nicaragua, Cook Islands, French Polynesia, Samoa, Kiribati, Tuvalu, Tonga, Vanuatu, New Caledonia, Wallis and Futuna, Nauru, Niue, Norfolk Island, Cambodia, Macau, Palau, Laos, Anguilla, Dominica, Montserrat, Saint Vincent and the Grenadines, Bhutan, Myanmar, East Timor, Christmas Island, Cocos (Keeling) Islands, 
+
+Nodos con rol role_3:
+Philippines, Indonesia, Fiji, Antigua and Barbuda, Barbados, Colombia, Martinique, Bahamas, Brazil, Jamaica, Peru, Costa Rica, Haiti, Guadeloupe, Chile, Saint Lucia, New Zealand, Algeria, El Salvador, Trinidad and Tobago, Panama, Tunisia, Pakistan, Puerto Rico, Netherlands Antilles, Argentina, Cote d'Ivoire, Senegal, Togo, Nigeria, Equatorial Guinea, Ghana, Kenya, South Africa, Namibia, Angola, Cape Verde, Serbia, Kuwait, Iran, Malaysia, Vietnam, Maldives, Mauritius, Seychelles, Tanzania, Bahrain, Uzbekistan, Azerbaijan, Kazakhstan, Venezuela, Iraq, Turkmenistan, Sri Lanka, Oman, Bangladesh, Ecuador, Bolivia, Uruguay, Paraguay, Virgin Islands, Marshall Islands, Guam, 
+
+Nodos con rol role_5:
+Bermuda, Saint Pierre and Miquelon, Mauritania, Luxembourg, Gibraltar, Brunei, Djibouti, Western Sahara, Nepal, American Samoa, Burma, 
+
