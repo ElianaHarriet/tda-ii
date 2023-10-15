@@ -140,16 +140,16 @@ def clustering(grafo):
         return 0
     return float(format(len(closed_triplets) / (len(closed_triplets) + len(open_triplets)), '.3f'))
 
-def generar_erdos_renyi(grafo, cant_nodos):
-    cant_aristas = grafo.cantidad_aristas()
+def generar_erdos_renyi(original, cant_nodos):
+    cant_aristas = original.cantidad_aristas()
     aristas_posibles = cant_nodos * (cant_nodos - 1)
-    if not grafo.es_dirigido():
+    if not original.es_dirigido():
         aristas_posibles = aristas_posibles // 2
     proba = cant_aristas / aristas_posibles
     
     # return nx.erdos_renyi_graph(cant_nodos, proba)
 
-    grafo_er = grafo.Grafo(grafo.es_dirigido())
+    grafo_er = grafo.Grafo(original.es_dirigido())
     for i in range(cant_nodos):
         grafo_er.agregar_vertice(i)
     for i in range(cant_nodos):
@@ -159,9 +159,9 @@ def generar_erdos_renyi(grafo, cant_nodos):
 
     return grafo_er
 
-def generar_preferential_attachment(grafo, cant_nodos):
-    grados = grados(grafo)
-    grado_promedio = round(sum(grados.values()) / len(grados), 2)
+def generar_preferential_attachment(original, cant_nodos):
+    original_grados = grados(original)
+    grado_promedio = round(sum(original_grados.values()) / len(original_grados))
 
     if cant_nodos < grado_promedio:
         raise ValueError("La cantidad de nodos debe ser mayor al grado promedio")
@@ -177,9 +177,9 @@ def generar_preferential_attachment(grafo, cant_nodos):
     
     for i in range(grado_promedio, cant_nodos):
         grafo_pa.agregar_vertice(i)
-        grados = grados(grafo_pa)
-        nodos = list(grados.keys())
-        probabilidades = [grados[nodo] for nodo in nodos]
+        pa_grados = grados(grafo_pa)
+        nodos = list(pa_grados.keys())
+        probabilidades = [pa_grados[nodo] for nodo in nodos]
         total_grados = sum(probabilidades)
         probabilidades = [p / total_grados for p in probabilidades]
         adyacentes = random.choices(nodos, probabilidades, k=grado_promedio)
@@ -188,4 +188,42 @@ def generar_preferential_attachment(grafo, cant_nodos):
             grafo_pa.agregar_arista(i, ady)
     
     return grafo_pa
+
+def all_anonymous_walks(grafo, n):
+    walks = all_walks(grafo, n)
+    _anonymous_walks = {}
+
+    for w in walks:
+        if len(w) < n:
+            continue
+        # walk = ""
+        walk = []
+        visitados = {}
+        for v in w:
+            visitados[v] = visitados.get(v, len(visitados))
+            walk.append(visitados[v])
+        _anonymous_walks[str(walk)] = _anonymous_walks.get(str(walk), 0) + 1
+
+    return _anonymous_walks
+
+def walk_from(grafo, v, n):
+    if n == 0:
+        return []
+    if n == 1:
+        return [[v]]
     
+    walks_v = []
+    for w in grafo.adyacentes(v):
+        walks_w = walk_from(grafo, w, n - 1)
+        for walk in walks_w:
+            if len(walk) < n - 1:
+                continue
+            walks_v += [[v] + walk]
+    
+    return walks_v
+
+def all_walks(grafo, n):
+    walks = []
+    for v in grafo.obtener_vertices():
+        walks += walk_from(grafo, v, n)
+    return walks
