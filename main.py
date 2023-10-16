@@ -16,51 +16,41 @@ def main():
     grafo = lib.cargar_grafo(grafo_csv, ',', 'Source', 'Target', 'ConexionAeropuertos', False)
     grafo_nx = lib.cargar_grafo_nx(grafo_csv, ',', 'Source', 'Target', 'ConexionAeropuertos', False)
     print("Grafo cargado")
+
+    # # Punto 4
+
+    # # simulación de un modelado de Erdös-Rényi
+    # grafo_er = lib.generar_erdos_renyi(grafo, 100)
+    # grafo_pa = lib.generar_preferential_attachment(grafo, 100)
+
+    # n = 4
+
+    # all_walks = lib.all_anonymous_walks(grafo, n)
+    # total = sum(all_walks.values())
+    # prob = []
     
-    # Cálculos para el punto 1
-    print("Cantidad de vertices: ", grafo.cantidad_vertices())
-    print("Cantidad de aristas: ", grafo.cantidad_aristas())
-    diametro = lib.diametro(grafo)
-    print("Diametro: ", len(diametro), " - ", diametro)
-    grados = lib.grados(grafo)
-    grado_promedio = round(sum(grados.values()) / len(grados), 2)
-    print("Grado promedio: ", grado_promedio)
-    print("Coef clustering:", lib.clustering(grafo))
+    # all_walks_er = lib.all_anonymous_walks(grafo_er, n)
+    # total_er = sum(all_walks_er.values())
+    # prob_er = []
 
-    # Punto 4
+    # all_walks_pa = lib.all_anonymous_walks(grafo_pa, n)
+    # total_pa = sum(all_walks_pa.values())
+    # prob_pa = []
 
-    # simulación de un modelado de Erdös-Rényi
-    grafo_er = lib.generar_erdos_renyi(grafo, 100)
-    grafo_pa = lib.generar_preferential_attachment(grafo, 100)
+    # walks = set(all_walks.keys()) | set(all_walks_er.keys()) | set(all_walks_pa.keys())
 
-    n = 4
-
-    all_walks = lib.all_anonymous_walks(grafo, n)
-    total = sum(all_walks.values())
-    prob = []
+    # for w in walks:
+    #     times = all_walks.get(w, 0)
+    #     times_er = all_walks_er.get(w, 0)
+    #     times_pa = all_walks_pa.get(w, 0)
+    #     prob.append(times / total)
+    #     prob_er.append(times_er / total_er)
+    #     prob_pa.append(times_pa / total_pa)
     
-    all_walks_er = lib.all_anonymous_walks(grafo_er, n)
-    total_er = sum(all_walks_er.values())
-    prob_er = []
-
-    all_walks_pa = lib.all_anonymous_walks(grafo_pa, n)
-    total_pa = sum(all_walks_pa.values())
-    prob_pa = []
-
-    walks = set(all_walks.keys()) | set(all_walks_er.keys()) | set(all_walks_pa.keys())
-
-    for w in walks:
-        times = all_walks.get(w, 0)
-        times_er = all_walks_er.get(w, 0)
-        times_pa = all_walks_pa.get(w, 0)
-        prob.append(times / total)
-        prob_er.append(times_er / total_er)
-        prob_pa.append(times_pa / total_pa)
-    
-    dist_coseno_er = distance.cosine(prob, prob_er)
-    print(f"Distancia de coseno entre original y erdos_renyi: {dist_coseno_er}")
-    dist_coseno_pa = distance.cosine(prob, prob_pa)
-    print(f"Distancia de coseno entre original y preferential_attachment: {dist_coseno_pa}")
+    # dist_coseno_er = distance.cosine(prob, prob_er)
+    # print(f"Distancia de coseno entre original y erdos_renyi: {dist_coseno_er}")
+    # dist_coseno_pa = distance.cosine(prob, prob_pa)
+    # print(f"Distancia de coseno entre original y preferential_attachment: {dist_coseno_pa}")
 
     # # Cálculos para el punto 6
     # # extract features
