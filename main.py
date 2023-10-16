@@ -49,18 +49,6 @@ def main():
 
     walks = set(all_walks.keys()) | set(all_walks_er.keys()) | set(all_walks_pa.keys())
 
-    # print("Original")
-    # for w in walks:
-    #     times = all_walks.get(w, 0)
-    #     print(f"\t{w} -> {round(times / total * 100, 2)}%")
-    # print("erdos_renyi")
-    # for w in walks:
-    #     times_er = all_walks_er.get(w, 0)
-    #     print(f"\t{w} -> {round(times / total_er * 100, 2)}%")
-    # print("preferential_attachment")
-    # for w in walks:
-    #     times_pa = all_walks_pa.get(w, 0)
-    #     print(f"\t{w} -> {round(times / total_pa * 100, 2)}%")
     for w in walks:
         times = all_walks.get(w, 0)
         times_er = all_walks_er.get(w, 0)

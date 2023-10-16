@@ -192,11 +192,7 @@ def generar_preferential_attachment(original, cant_nodos):
 def all_anonymous_walks(grafo, n):
     walks = all_walks(grafo, n)
     _anonymous_walks = {}
-
     for w in walks:
-        if len(w) < n:
-            continue
-        # walk = ""
         walk = []
         visitados = {}
         for v in w:
@@ -206,24 +202,23 @@ def all_anonymous_walks(grafo, n):
 
     return _anonymous_walks
 
-def walk_from(grafo, v, n):
-    if n == 0:
-        return []
-    if n == 1:
-        return [[v]]
-    
-    walks_v = []
-    for w in grafo.adyacentes(v):
-        walks_w = walk_from(grafo, w, n - 1)
-        for walk in walks_w:
-            if len(walk) < n - 1:
-                continue
-            walks_v += [[v] + walk]
-    
-    return walks_v
-
 def all_walks(grafo, n):
-    walks = []
+    walks = {}
+
+    for i in range(1, n + 1):
+        walks[i] = {}
+        for v in grafo.obtener_vertices():
+            walks[i][v] = []
+            if i == 1:
+                walks[i][v] = [[v]]
+                continue
+            for w in grafo.adyacentes(v):
+                walks_w = walks[i - 1][w]
+                for walk in walks_w:
+                    walks[i][v] += [[v] + walk]
+
+    walks_n = []
     for v in grafo.obtener_vertices():
-        walks += walk_from(grafo, v, n)
-    return walks
+        walks_n += walks[n][v]
+    
+    return walks_n
