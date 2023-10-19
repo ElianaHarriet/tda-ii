@@ -4,7 +4,8 @@
 ### **1**
 
 La red es un grafo no dirigido que modela las conexiones entre aeropuertos. Tiene un grado promedio de 24.908, lo que significa que cada aeropuerto está conectado directamente a aproximadamente 25 otros aeropuertos. El diámetro de la red es 5, lo que indica que la mayor cantidad de aeropuertos que tendría uno que atravesar para ir de un aeropuerto a otro (por el camino más corto) es 5. Además, el coeficiente medio de clustering es 0.687, lo que sugiere una alta probabilidad de que los aeropuertos conectados entre sí también estén conectados con los mismos aeropuertos.  
-![Datos obtenidos con gephi](imgs/1.png)
+![Datos obtenidos con gephi](imgs/1.png)  
+![Grafo de aeropuertos - Ranking según el grado del nodo](imgs/grados.png)  
 
 ### **2**
 
@@ -62,7 +63,8 @@ Representación de anonymous walks del modelado de Preferential Attachment (larg
 Distancia coseno entre la red original y el modelado de Erdös-Rényi: 1.7410003666507023e-05
 Distancia coseno entre la red original y el modelado de Preferential Attachment: 1.2337893790403953e-05
 ```
-#TODO poner conclusión
+
+Se puede ver que ambas simulaciones tienen una distancia del coseno muy baja con respecto a la red original, lo que indica que son buenas simulaciones. Sin embargo, la simulación de Erdös-Rényi tiene una distancia del coseno mayor que la de Preferential Attachment, lo que indica que la simulación de Preferential Attachment es mejor.  
 
 ### **5**
 #TODO
