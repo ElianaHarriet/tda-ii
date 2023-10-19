@@ -1,0 +1,16 @@
+Nodos con rol role_0:
+Iceland, Faroe Islands, Bermuda, Saint Pierre and Miquelon, Libya, Mauritania, Luxembourg, Slovakia, Cyprus, Montenegro, Slovenia, Estonia, Macedonia, Bosnia and Herzegovina, Albania, Moldova, Guernsey, Jersey, Tajikistan, Gibraltar, Isle of Man, Brunei, Saint Helena, Armenia, Western Sahara, Afghanistan, Kyrgyzstan, Nepal, American Samoa, Northern Mariana Islands, Mongolia, North Korea, 
+Promedio de grado: 12.1875
+
+Nodos con rol role_1:
+Australia, Hong Kong, Japan, Singapore, China, Denmark, Finland, Norway, Netherlands, Sweden, United States, Belgium, France, Germany, United Kingdom, Canada, Switzerland, Spain, Ireland, Hungary, Poland, Latvia, Austria, Lithuania, Czech Republic, Jordan, United Arab Emirates, Italy, South Korea, Turkey, Israel, Morocco, Ethiopia, Egypt, Qatar, Portugal, Russia, Saudi Arabia, Greece, India, Ukraine, Croatia, Lebanon, Malta, Bulgaria, Romania, Thailand, Georgia, Belarus, 
+Promedio de grado: 61.775510204081634
+
+Nodos con rol role_2:
+Papua New Guinea, Solomon Islands, Micronesia, Greenland, Aruba, Cayman Islands, Grenada, Turks and Caicos Islands, Guyana, Belize, Saint Kitts and Nevis, Mali, Niger, Burkina Faso, Benin, Gabon, Cameroon, Congo (Brazzaville), Guinea, Liberia, Sao Tome and Principe, Congo (Kinshasa), Chad, Sudan, Burundi, Falkland Islands, Zimbabwe, Zambia, Suriname, Botswana, Malawi, Madagascar, Mozambique, Lesotho, Swaziland, Central African Republic, Comoros, Mayotte, Guinea-Bissau, Somalia, South Sudan, Yemen, Eritrea, Syria, French Guiana, British Virgin Islands, Nicaragua, Cook Islands, French Polynesia, Samoa, Tuvalu, Tonga, Vanuatu, New Caledonia, Wallis and Futuna, Nauru, Niue, Norfolk Island, Cambodia, Burma, Macau, Palau, Laos, Anguilla, Dominica, Montserrat, Saint Vincent and the Grenadines, Bhutan, Myanmar, East Timor, Christmas Island, Cocos (Keeling) Islands, 
+Promedio de grado: 8.01388888888889
+
+Nodos con rol role_3:
+Philippines, Indonesia, Fiji, Antigua and Barbuda, Dominican Republic, Barbados, Colombia, Cuba, Mexico, Martinique, Bahamas, Brazil, Jamaica, Peru, Costa Rica, Haiti, Guadeloupe, Chile, Saint Lucia, New Zealand, Algeria, El Salvador, Taiwan, Trinidad and Tobago, Panama, Tunisia, Pakistan, Puerto Rico, Netherlands Antilles, Argentina, Cote d'Ivoire, Senegal, Togo, Nigeria, Equatorial Guinea, Ghana, Kenya, Sierra Leone, South Africa, Namibia, Gambia, Rwanda, Angola, Cape Verde, Uganda, Serbia, Kuwait, Iran, Malaysia, Vietnam, Maldives, Mauritius, Seychelles, Tanzania, Bahrain, Uzbekistan, Azerbaijan, Kazakhstan, Venezuela, Iraq, Turkmenistan, Sri Lanka, Oman, Bangladesh, Ecuador, Reunion, Djibouti, Guatemala, Bolivia, Uruguay, Paraguay, Honduras, Virgin Islands, Kiribati, Marshall Islands, Guam, 
+Promedio de grado: 22.5
+
