@@ -19,8 +19,8 @@ def main():
     puentes_globales = lib.extraer_puentes_globales(grafo)
     
     with open(PUENTES_GLOBALES_TXT, 'w') as file:
+        file.write(f'Puentes Globales:\n')
         for bridge in puentes_globales:
-            file.write(f'Puentes Globales:\n')
             file.write(f'Puente: {bridge}\n')
     
     print(f"Puentes globales guardados en {PUENTES_GLOBALES_TXT} ✔")
@@ -28,8 +28,8 @@ def main():
     puentes_locales = lib.extraer_puentes_locales(grafo)
 
     with open(PUENTES_LOCALES_TXT, 'w') as file:
+        file.write(f'Puentes Locales:\n')
         for bridge in puentes_locales:
-            file.write(f'Puentes Locales:\n')
             file.write(f'Puente: {bridge}\n')
     
     print(f"Puentes locales guardados en {PUENTES_LOCALES_TXT} ✔")
