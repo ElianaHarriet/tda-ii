@@ -1,0 +1,325 @@
+Source,Target,Type,Id,Label,Weight
+Benin,Togo,Undirected,2984,,1
+Benin,Burkina Faso,Undirected,2985,,1
+Benin,Cote d'Ivoire,Undirected,2987,,1
+Benin,France,Undirected,2988,,1
+Benin,Morocco,Undirected,2989,,1
+Benin,Nigeria,Undirected,2990,,1
+Benin,Equatorial Guinea,Undirected,2991,,1
+Benin,Mali,Undirected,2992,,1
+Benin,Gabon,Undirected,2993,,1
+Benin,Senegal,Undirected,2994,,1
+Benin,Cameroon,Undirected,2995,,1
+Benin,Ethiopia,Undirected,2996,,1
+Benin,Niger,Undirected,2997,,1
+Benin,Ghana,Undirected,2998,,1
+Benin,Kenya,Undirected,2999,,1
+Benin,Congo (Brazzaville),Undirected,3000,,1
+Benin,Turkey,Undirected,3001,,1
+Burkina Faso,Cote d'Ivoire,Undirected,3003,,1
+Burkina Faso,Ghana,Undirected,3004,,1
+Burkina Faso,Mali,Undirected,3005,,1
+Burkina Faso,Senegal,Undirected,3006,,1
+Burkina Faso,Togo,Undirected,3007,,1
+Burkina Faso,Niger,Undirected,3008,,1
+Burkina Faso,France,Undirected,3010,,1
+Burkina Faso,Morocco,Undirected,3011,,1
+Burkina Faso,Ethiopia,Undirected,3012,,1
+Burkina Faso,Turkey,Undirected,3013,,1
+Burkina Faso,Guinea,Undirected,3015,,1
+Burkina Faso,Sierra Leone,Undirected,3016,,1
+Burkina Faso,Nigeria,Undirected,3017,,1
+Ghana,Senegal,Undirected,3018,,1
+Ghana,Nigeria,Undirected,3019,,1
+Ghana,Liberia,Undirected,3020,,1
+Ghana,Morocco,Undirected,3022,,1
+Ghana,Togo,Undirected,3023,,1
+Ghana,Cote d'Ivoire,Undirected,3026,,1
+Ghana,Sierra Leone,Undirected,3027,,1
+Ghana,Ethiopia,Undirected,3029,,1
+Ghana,Kenya,Undirected,3032,,1
+Ghana,South Africa,Undirected,3036,,1
+Ghana,Namibia,Undirected,3037,,1
+Ghana,Turkey,Undirected,3038,,1
+Ghana,France,Undirected,3040,,1
+Ghana,Gambia,Undirected,3041,,1
+Ghana,Sao Tome and Principe,Undirected,3043,,1
+Ghana,Equatorial Guinea,Undirected,3044,,1
+Cote d'Ivoire,Mali,Undirected,3045,,1
+Cote d'Ivoire,France,Undirected,3047,,1
+Cote d'Ivoire,Morocco,Undirected,3048,,1
+Cote d'Ivoire,Senegal,Undirected,3049,,1
+Cote d'Ivoire,Sierra Leone,Undirected,3050,,1
+Cote d'Ivoire,Liberia,Undirected,3051,,1
+Cote d'Ivoire,Guinea,Undirected,3052,,1
+Cote d'Ivoire,Togo,Undirected,3053,,1
+Cote d'Ivoire,Nigeria,Undirected,3054,,1
+Cote d'Ivoire,Cameroon,Undirected,3055,,1
+Cote d'Ivoire,Gabon,Undirected,3056,,1
+Cote d'Ivoire,Kenya,Undirected,3057,,1
+Cote d'Ivoire,Turkey,Undirected,3058,,1
+Cote d'Ivoire,Equatorial Guinea,Undirected,3060,,1
+Cote d'Ivoire,Ethiopia,Undirected,3062,,1
+Cote d'Ivoire,Congo (Kinshasa),Undirected,3063,,1
+Cote d'Ivoire,Niger,Undirected,3064,,1
+Cote d'Ivoire,Congo (Brazzaville),Undirected,3065,,1
+Nigeria,Senegal,Undirected,3068,,1
+Nigeria,Cameroon,Undirected,3069,,1
+Nigeria,Liberia,Undirected,3070,,1
+Nigeria,France,Undirected,3071,,1
+Nigeria,Morocco,Undirected,3072,,1
+Nigeria,Mali,Undirected,3075,,1
+Nigeria,Gabon,Undirected,3076,,1
+Nigeria,Equatorial Guinea,Undirected,3077,,1
+Nigeria,Ethiopia,Undirected,3080,,1
+Nigeria,Togo,Undirected,3081,,1
+Nigeria,Chad,Undirected,3082,,1
+Nigeria,Niger,Undirected,3083,,1
+Nigeria,Kenya,Undirected,3086,,1
+Nigeria,South Africa,Undirected,3092,,1
+Nigeria,Turkey,Undirected,3095,,1
+Nigeria,Sierra Leone,Undirected,3096,,1
+Nigeria,Rwanda,Undirected,3097,,1
+Nigeria,Angola,Undirected,3098,,1
+Nigeria,Namibia,Undirected,3099,,1
+Nigeria,Cape Verde,Undirected,3100,,1
+Nigeria,Uganda,Undirected,3101,,1
+Niger,France,Undirected,3104,,1
+Niger,Morocco,Undirected,3105,,1
+Niger,Ethiopia,Undirected,3106,,1
+Niger,Chad,Undirected,3107,,1
+Niger,Turkey,Undirected,3108,,1
+Niger,Togo,Undirected,3110,,1
+Niger,Mali,Undirected,3111,,1
+Togo,France,Undirected,3142,,1
+Togo,Morocco,Undirected,3143,,1
+Togo,Ethiopia,Undirected,3144,,1
+Togo,Mali,Undirected,3145,,1
+Togo,Guinea,Undirected,3146,,1
+Togo,Cameroon,Undirected,3147,,1
+Togo,Gabon,Undirected,3149,,1
+Togo,Equatorial Guinea,Undirected,3151,,1
+Togo,Senegal,Undirected,3153,,1
+Togo,Congo (Kinshasa),Undirected,3154,,1
+South Africa,France,Undirected,3804,,1
+South Africa,Zimbabwe,Undirected,3807,,1
+South Africa,Zambia,Undirected,3808,,1
+South Africa,Namibia,Undirected,3810,,1
+South Africa,Botswana,Undirected,3811,,1
+South Africa,Congo (Kinshasa),Undirected,3812,,1
+South Africa,Angola,Undirected,3815,,1
+South Africa,Ethiopia,Undirected,3816,,1
+South Africa,Malawi,Undirected,3817,,1
+South Africa,Seychelles,Undirected,3818,,1
+South Africa,Tanzania,Undirected,3819,,1
+South Africa,Kenya,Undirected,3821,,1
+South Africa,Madagascar,Undirected,3824,,1
+South Africa,Mozambique,Undirected,3829,,1
+South Africa,Congo (Brazzaville),Undirected,3831,,1
+South Africa,Senegal,Undirected,3832,,1
+South Africa,Uganda,Undirected,3833,,1
+South Africa,Rwanda,Undirected,3834,,1
+South Africa,Gabon,Undirected,3835,,1
+South Africa,Lesotho,Undirected,3836,,1
+South Africa,Swaziland,Undirected,3837,,1
+South Africa,Turkey,Undirected,3839,,1
+South Africa,Reunion,Undirected,3840,,1
+Botswana,Zimbabwe,Undirected,3844,,1
+Botswana,Zambia,Undirected,3845,,1
+Botswana,Kenya,Undirected,3846,,1
+Botswana,Namibia,Undirected,3847,,1
+Botswana,Ethiopia,Undirected,3848,,1
+Congo (Brazzaville),France,Undirected,3849,,1
+Congo (Brazzaville),Morocco,Undirected,3850,,1
+Congo (Brazzaville),Congo (Kinshasa),Undirected,3851,,1
+Congo (Brazzaville),Angola,Undirected,3852,,1
+Congo (Brazzaville),Gabon,Undirected,3853,,1
+Congo (Brazzaville),Ethiopia,Undirected,3854,,1
+Congo (Brazzaville),Cameroon,Undirected,3855,,1
+Congo (Brazzaville),Kenya,Undirected,3856,,1
+Congo (Brazzaville),Rwanda,Undirected,3857,,1
+Congo (Brazzaville),Equatorial Guinea,Undirected,3858,,1
+Congo (Brazzaville),Turkey,Undirected,3859,,1
+Congo (Kinshasa),Cameroon,Undirected,3860,,1
+Congo (Kinshasa),Angola,Undirected,3861,,1
+Congo (Kinshasa),France,Undirected,3862,,1
+Congo (Kinshasa),Morocco,Undirected,3863,,1
+Congo (Kinshasa),Ethiopia,Undirected,3864,,1
+Congo (Kinshasa),Zambia,Undirected,3865,,1
+Congo (Kinshasa),Gabon,Undirected,3866,,1
+Congo (Kinshasa),Kenya,Undirected,3867,,1
+Congo (Kinshasa),Turkey,Undirected,3868,,1
+Congo (Kinshasa),Burundi,Undirected,3869,,1
+Congo (Kinshasa),Uganda,Undirected,3870,,1
+Congo (Kinshasa),Chad,Undirected,3871,,1
+Congo (Kinshasa),Rwanda,Undirected,3872,,1
+Congo (Kinshasa),Malawi,Undirected,3873,,1
+Central African Republic,Cameroon,Undirected,3874,,1
+Central African Republic,France,Undirected,3875,,1
+Central African Republic,Morocco,Undirected,3876,,1
+Central African Republic,Chad,Undirected,3877,,1
+Central African Republic,Kenya,Undirected,3878,,1
+Central African Republic,Uganda,Undirected,3879,,1
+Equatorial Guinea,Cameroon,Undirected,3880,,1
+Equatorial Guinea,Morocco,Undirected,3881,,1
+Equatorial Guinea,Gabon,Undirected,3882,,1
+Equatorial Guinea,Ethiopia,Undirected,3883,,1
+Equatorial Guinea,Sao Tome and Principe,Undirected,3885,,1
+Equatorial Guinea,France,Undirected,3886,,1
+Cameroon,Senegal,Undirected,3906,,1
+Cameroon,France,Undirected,3907,,1
+Cameroon,Morocco,Undirected,3908,,1
+Cameroon,Ethiopia,Undirected,3909,,1
+Cameroon,Chad,Undirected,3910,,1
+Cameroon,Gabon,Undirected,3911,,1
+Cameroon,Kenya,Undirected,3912,,1
+Cameroon,Turkey,Undirected,3913,,1
+Cameroon,Rwanda,Undirected,3914,,1
+Cameroon,Mali,Undirected,3915,,1
+Zambia,Zimbabwe,Undirected,3917,,1
+Zambia,Malawi,Undirected,3918,,1
+Zambia,Kenya,Undirected,3919,,1
+Zambia,Angola,Undirected,3920,,1
+Zambia,Ethiopia,Undirected,3922,,1
+Zambia,Namibia,Undirected,3923,,1
+Zambia,Tanzania,Undirected,3924,,1
+Zambia,Turkey,Undirected,3925,,1
+Zambia,Rwanda,Undirected,3926,,1
+Comoros,Mayotte,Undirected,3927,,1
+Comoros,Kenya,Undirected,3928,,1
+Comoros,Djibouti,Undirected,3929,,1
+Comoros,Madagascar,Undirected,3930,,1
+Comoros,Tanzania,Undirected,3931,,1
+Comoros,Reunion,Undirected,3932,,1
+Comoros,Ethiopia,Undirected,3933,,1
+Mayotte,Kenya,Undirected,3934,,1
+Mayotte,Madagascar,Undirected,3935,,1
+Mayotte,Reunion,Undirected,3936,,1
+Mayotte,France,Undirected,3937,,1
+Mayotte,Tanzania,Undirected,3938,,1
+Mayotte,Mozambique,Undirected,3939,,1
+Reunion,France,Undirected,3940,,1
+Reunion,Madagascar,Undirected,3941,,1
+Reunion,Seychelles,Undirected,3945,,1
+Reunion,Djibouti,Undirected,3946,,1
+Madagascar,France,Undirected,3947,,1
+Madagascar,Kenya,Undirected,3948,,1
+Madagascar,Ethiopia,Undirected,3950,,1
+Angola,France,Undirected,3951,,1
+Angola,Morocco,Undirected,3952,,1
+Angola,Zimbabwe,Undirected,3956,,1
+Angola,Sao Tome and Principe,Undirected,3959,,1
+Angola,Namibia,Undirected,3960,,1
+Angola,Ethiopia,Undirected,3961,,1
+Angola,Kenya,Undirected,3963,,1
+Angola,Mozambique,Undirected,3964,,1
+Angola,Gabon,Undirected,3965,,1
+Gabon,France,Undirected,3967,,1
+Gabon,Morocco,Undirected,3968,,1
+Gabon,Ethiopia,Undirected,3969,,1
+Gabon,Turkey,Undirected,3970,,1
+Gabon,Rwanda,Undirected,3971,,1
+Gabon,Sao Tome and Principe,Undirected,3972,,1
+Gabon,Mali,Undirected,3973,,1
+Sao Tome and Principe,Cape Verde,Undirected,3974,,1
+Mozambique,Ethiopia,Undirected,3976,,1
+Mozambique,Kenya,Undirected,3977,,1
+Mozambique,Tanzania,Undirected,3978,,1
+Mozambique,Malawi,Undirected,3980,,1
+Seychelles,Kenya,Undirected,3983,,1
+Seychelles,France,Undirected,3986,,1
+Seychelles,Ethiopia,Undirected,3987,,1
+Seychelles,Turkey,Undirected,3990,,1
+Chad,France,Undirected,3993,,1
+Chad,Ethiopia,Undirected,3994,,1
+Chad,Turkey,Undirected,3996,,1
+Chad,Morocco,Undirected,3997,,1
+Chad,Kenya,Undirected,3998,,1
+Zimbabwe,Kenya,Undirected,4000,,1
+Zimbabwe,Ethiopia,Undirected,4001,,1
+Zimbabwe,Malawi,Undirected,4002,,1
+Zimbabwe,Tanzania,Undirected,4003,,1
+Zimbabwe,Namibia,Undirected,4004,,1
+Zimbabwe,Rwanda,Undirected,4005,,1
+Malawi,Kenya,Undirected,4006,,1
+Malawi,Ethiopia,Undirected,4007,,1
+Malawi,Tanzania,Undirected,4008,,1
+Mali,Senegal,Undirected,4009,,1
+Mali,France,Undirected,4010,,1
+Mali,Morocco,Undirected,4011,,1
+Mali,Guinea,Undirected,4012,,1
+Mali,Ethiopia,Undirected,4013,,1
+Mali,Kenya,Undirected,4014,,1
+Mali,Mauritania,Undirected,4015,,1
+Mali,Turkey,Undirected,4017,,1
+Gambia,Senegal,Undirected,4019,,1
+Gambia,Sierra Leone,Undirected,4020,,1
+Gambia,Morocco,Undirected,4021,,1
+Gambia,Guinea-Bissau,Undirected,4022,,1
+Gambia,Cape Verde,Undirected,4023,,1
+Gambia,Liberia,Undirected,4024,,1
+Gambia,Turkey,Undirected,4025,,1
+Gambia,Guinea,Undirected,4026,,1
+Sierra Leone,Senegal,Undirected,4095,,1
+Sierra Leone,Liberia,Undirected,4096,,1
+Sierra Leone,France,Undirected,4097,,1
+Sierra Leone,Morocco,Undirected,4098,,1
+Sierra Leone,Guinea,Undirected,4099,,1
+Guinea-Bissau,Guinea,Undirected,4100,,1
+Guinea-Bissau,Senegal,Undirected,4101,,1
+Guinea-Bissau,Morocco,Undirected,4102,,1
+Guinea-Bissau,Cape Verde,Undirected,4103,,1
+Liberia,France,Undirected,4105,,1
+Liberia,Morocco,Undirected,4106,,1
+Liberia,Guinea,Undirected,4107,,1
+Morocco,France,Undirected,4109,,1
+Morocco,Turkey,Undirected,4110,,1
+Morocco,Guinea,Undirected,4116,,1
+Morocco,Senegal,Undirected,4117,,1
+Morocco,Mauritania,Undirected,4123,,1
+Morocco,Cape Verde,Undirected,4124,,1
+Morocco,Gibraltar,Undirected,4130,,1
+Senegal,Guinea,Undirected,4136,,1
+Senegal,France,Undirected,4137,,1
+Senegal,Mauritania,Undirected,4139,,1
+Senegal,Cape Verde,Undirected,4140,,1
+Senegal,Turkey,Undirected,4143,,1
+Mauritania,France,Undirected,4146,,1
+Mauritania,Guinea,Undirected,4147,,1
+Mauritania,Turkey,Undirected,4148,,1
+Guinea,France,Undirected,4149,,1
+Cape Verde,France,Undirected,4152,,1
+Ethiopia,France,Undirected,4163,,1
+Ethiopia,Tanzania,Undirected,4164,,1
+Ethiopia,Uganda,Undirected,4165,,1
+Ethiopia,Somalia,Undirected,4167,,1
+Ethiopia,Djibouti,Undirected,4169,,1
+Ethiopia,Rwanda,Undirected,4171,,1
+Ethiopia,Kenya,Undirected,4174,,1
+Ethiopia,Turkey,Undirected,4181,,1
+Ethiopia,Burundi,Undirected,4183,,1
+Ethiopia,Namibia,Undirected,4189,,1
+Burundi,Kenya,Undirected,4195,,1
+Burundi,Rwanda,Undirected,4196,,1
+Burundi,Uganda,Undirected,4197,,1
+Burundi,Tanzania,Undirected,4198,,1
+Somalia,Djibouti,Undirected,4199,,1
+Somalia,Kenya,Undirected,4200,,1
+Somalia,Uganda,Undirected,4203,,1
+Kenya,Tanzania,Undirected,4251,,1
+Kenya,Rwanda,Undirected,4253,,1
+Kenya,France,Undirected,4254,,1
+Kenya,Djibouti,Undirected,4260,,1
+Kenya,Uganda,Undirected,4261,,1
+Kenya,Turkey,Undirected,4265,,1
+Rwanda,Uganda,Undirected,4277,,1
+Rwanda,Turkey,Undirected,4278,,1
+Rwanda,Tanzania,Undirected,4279,,1
+Rwanda,Djibouti,Undirected,4284,,1
+Tanzania,Uganda,Undirected,4301,,1
+Tanzania,Turkey,Undirected,4303,,1
+Uganda,Turkey,Undirected,4308,,1
+Uganda,Djibouti,Undirected,4310,,1
+France,Turkey,Undirected,4385,,1
+France,Djibouti,Undirected,4415,,1
+Turkey,Djibouti,Undirected,4772,,1
