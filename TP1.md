@@ -7,9 +7,45 @@ La red es un grafo no dirigido que modela las conexiones entre aeropuertos. Tien
 ![Datos obtenidos con gephi](imgs/1.png)  
 ![Grafo de aeropuertos - Ranking según el grado del nodo](imgs/grados.png)  
 
-### **2**
+### **2. a.**
 
-#TODO
+Analizaremos la existencia o no de Homofilia respecto a los continentes a los que pertenece cada aereopuerto. Una primera intuicion, es creer que los paises pertenecientes al mismo continente, tendran mayor cantidad de aristas internas y que solo los principales aereopuertos tendran vuelos intercontinentales. Esto quiere decir, que existe una homofilia importante en esta red y se trata de una homofilia respecto al continente al que pertenece cada aereopuerto. Tiene sentido pensar que aereopuertos cercanos entre si son mas propensos a tener vuelos entre ellos que aereopuertos que se encuentran a distancias mucho mayores. 
+
+Para analizar la existencia de este tipo de homofilia, queremos saber a que continente pertenece cada pais. Para esto mediante un set de datos sacado de [kaggle](https://www.kaggle.com/datasets/statchaitya/country-to-continent/) y mediante el uso de pandas en el siguiente [collab](https://colab.research.google.com/drive/1H0Sfu6jwHvia_ggWMJq0iPDoHpGw-PtP?usp=sharing) formamos un nuevo set de datos asignandole a cada nodo del set de datos original del tp, su respectivo continente. 
+
+De esta forma, tomamos dos caminos. Primero, de forma visual pudimos importar este nuevo atributo a Gephi y ver como se distribuyen las aristas en el grafo dados los distintos continentes. Ademas, mediante un modelo de Layout "Radial Axis Layout" podemos visualizar de mejor manera la posibilidad de homofilia. Ya que agrupando los nodos por continente, resulta visible la existencia o ausencia de aristas entre continentes. De esta forma llegamos a las siguientes imagenes:
+- Colores por continentes:
+
+![Colores de los continentes](imgs/continents_colors.png)
+- Grafo por continentes:
+
+![Grafo por continentes](imgs/continents_bk.png)
+- Layout Radial Axis por continentes:
+
+![Radial Axis por Continentes](imgs/radial_axis_continent_bk.png)
+
+(Nota: el radial axis tomo 2 ejes para los paises de Europa, que son los nodos naranjas.)
+
+Segundo, podemos efectivamente calcular la Homofilia en la red. Para ello, vamos a asignar la probabilidad $p_i$ con un valor i para cada continente, siendo la proporcion de paises de dicho continente vs paises totales del grafo. Luego la probabilidad de que se unan dos vertices del mismo continente es $p_i^2$, y la probabilidad de que una arista una un vertice del continente $i$ con otro de otro continente es $2p_iq_i$ donde $q_i= \sum_{j\neq{i}}{p_j}$. Luego, como todos los paises pertenecen a algun continente (eso asumimos), tomamos $q_i = 1 - p_i$. Y finalmente, se podria podria calcular efectivamente para cada continente, la cantidad de aristas que quedan en el mismo continente, y la cantidad que van a aereopuertos de otros continentes y analizar la relacion obtenida para ver la existencia o no de homofilia. En el colab, obtuvimos los $p_i$ y $q_i$ para cada continente, pero no logramos calcular la relacion real en el grafo para cada continente.
+
+### **2. b.**
+
+Luego, ejecutamos Community Detection en Gephi **sobre el grafo original del tp** (es decir, sin conocer los continentes de cada nodo). Gephi implementa el algoritmo de Louvain para la deteccion de comunidades, y dados los siguientes parametros Gephi pudo detectar 5 comunidades, que se pueden visualizar a continuacion.
+- Parametros de Community Detection
+
+![Parametros Community Detection](imgs/community_detection_params.png)
+- Grafo por comunidades detectadas:
+
+![Grafo de comunidades](imgs/community_detection.png)
+
+
+Luego, podemos decir que hay una correspondencia entre lo encontrado por el algoritmo y lo indicado sobre la existencia de homofilia. Las comunidades encontradas por Gephi comparten en su mayoria paises pertenecientes a un mismo continente. Icluso siendo la misma cantidad de comunidades que continentes (segun el parametro 'Resolution', estas comunidades varian entre 4 y 6).
+
+### **2. c.**
+
+Considerando lo mencionado en el punto **2. a.** Podemos ver que efectivamente se verifica la existencia de homofilia de acuerdo a lo indicado. Ya que las comunidades encontradas por el algoritmo son similares a la separacion por continentes.
+
+Cabe destacar de todos modos que esta separacion en comunidades no se corresponde totalmente con la esperada, ya que hay paises que se encuentran en comunidades distintas a las esperadas. En la imagen anterior podemos ver principalmente a España y Francia perteneciendo a comunidades con paises principalmente Americanos (Comunidad Lila) y Africanos (Comunidad Rosasea) respectivamente. Mientras que el resto de paises europeos se encuentran en la comunidad de color Naranja. Esto podria estar relacionado al hecho de que estos paises suelen ser la puerta de entrada a Europa desde los continentes antes mencionados.
 
 ### **3**
 
@@ -66,8 +102,8 @@ Distancia coseno entre la red original y el modelado de Preferential Attachment:
 
 Se puede ver que ambas simulaciones tienen una distancia del coseno muy baja con respecto a la red original, lo que indica que son buenas simulaciones. Sin embargo, la simulación de Erdös-Rényi tiene una distancia del coseno mayor que la de Preferential Attachment, lo que indica que la simulación de Preferential Attachment es mejor.  
 
-### **5**
-#TODO
+### **5. a.**
+Tomamos la subred 
 
 ### **6**
 El código utilizado para detectar los roles se encuentra en ```lib.py```. En el archivo ```main_4.py```, se lleva a cabo dicha detección para un número de roles definido. Finalmente, se guardan los resultados en un archivo con los nodos separados por roles. A continuación se muestran algunos resultados obtenidos para distintas cantidades de roles.  
@@ -83,5 +119,4 @@ Para la división en 4 roles, se obtuvo lo siguiente:
 - Un rol con aeropuertos de importancia media, tendiendo a chica, (`Luxembourg, Slovakia, Cyprus, Montenegro, Slovenia, Estonia, Macedonia, Bosnia and Herzegovina, ...`)
 
 ### **7**
-
-#TODO
+Los puentes globales o locales en la red se calcularon mediante el networkx, utilizando las funciones correspondientes ```nx.bridges()``` y ```nx.local_bridges()``` el respectivo archivo ```main_7.py```. Los resultados correspondientes se encuentran guardados en ```global.txt``` y ```local.txt```.
