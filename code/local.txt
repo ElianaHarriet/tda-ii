@@ -1,0 +1,22 @@
+Puentes Locales:
+Puente: ('Antigua and Barbuda', 'Montserrat', inf)
+Puentes Locales:
+Puente: ('United Kingdom', 'Saint Helena', inf)
+Puentes Locales:
+Puente: ('Fiji', 'Tuvalu', inf)
+Puentes Locales:
+Puente: ('New Zealand', 'Niue', inf)
+Puentes Locales:
+Puente: ('Burma', 'Myanmar', inf)
+Puentes Locales:
+Puente: ('Micronesia', 'Marshall Islands', 3)
+Puentes Locales:
+Puente: ('United States', 'American Samoa', inf)
+Puentes Locales:
+Puente: ('Canada', 'Saint Pierre and Miquelon', inf)
+Puentes Locales:
+Puente: ('Papua New Guinea', 'Micronesia', 3)
+Puentes Locales:
+Puente: ('South Africa', 'Lesotho', inf)
+Puentes Locales:
+Puente: ('South Africa', 'Swaziland', inf)

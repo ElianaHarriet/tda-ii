@@ -140,3 +140,9 @@ def extraer_roles(grafo, n_roles):
     print('\nNode role membership by percentage:')
     print(role_extractor.role_percentage.round(2))
     return node_roles
+
+def extraer_puentes_globales(grafo):
+    return list(nx.bridges(grafo))
+
+def extraer_puentes_locales(grafo):
+    return set(nx.local_bridges(grafo))

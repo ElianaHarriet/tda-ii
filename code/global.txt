@@ -1,0 +1,18 @@
+Puentes Globales:
+Puente: ('Fiji', 'Tuvalu')
+Puentes Globales:
+Puente: ('United States', 'American Samoa')
+Puentes Globales:
+Puente: ('United Kingdom', 'Saint Helena')
+Puentes Globales:
+Puente: ('Canada', 'Saint Pierre and Miquelon')
+Puentes Globales:
+Puente: ('Antigua and Barbuda', 'Montserrat')
+Puentes Globales:
+Puente: ('New Zealand', 'Niue')
+Puentes Globales:
+Puente: ('South Africa', 'Lesotho')
+Puentes Globales:
+Puente: ('South Africa', 'Swaziland')
+Puentes Globales:
+Puente: ('Burma', 'Myanmar')
