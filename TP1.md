@@ -103,7 +103,7 @@ Distancia coseno entre la red original y el modelado de Preferential Attachment:
 Se puede ver que ambas simulaciones tienen una distancia del coseno muy baja con respecto a la red original, lo que indica que son buenas simulaciones. Sin embargo, la simulación de Erdös-Rényi tiene una distancia del coseno mayor que la de Preferential Attachment, lo que indica que la simulación de Preferential Attachment es mejor.  
 
 ### **5. a.**
-Tomamos la subred 
+#TODO
 
 ### **6**
 El código utilizado para detectar los roles se encuentra en ```lib.py```. En el archivo ```main_4.py```, se lleva a cabo dicha detección para un número de roles definido. Finalmente, se guardan los resultados en un archivo con los nodos separados por roles. A continuación se muestran algunos resultados obtenidos para distintas cantidades de roles.  
