@@ -8,7 +8,3 @@
 ```bash
 $ pip install graphrole
 ```
-- SeaBorn
-```bash
-$ pip install seaborn
-```
