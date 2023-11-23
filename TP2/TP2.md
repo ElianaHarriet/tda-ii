@@ -79,7 +79,24 @@ Al ganar A no se está cumpliendo la propiedad de ser Pareto-Eficiente ya que el
 
 ### **3**
 
-#TODO  
+Considerando la siguiente red, en donde cada nodo tiene inicialmente un comportamiento B:  
+
+![Grafo original](src/3.1.png)
+
+Suponemos a E y F como _early adopters_ del comportamiento A (marcado en violeta). Y que el resto de nodos adoptará este comportamiento sólo si al menos la mitad de sus vecinos lo adoptan.  
+
+![Grafo en etapa 1](src/3.2.png)
+
+A continuación se muestra la secuencia en la que adoptan el comportamiento A los nodos restantes.  
+
+![Grafo en etapas siguientes](src/3.3.png)
+
+Finalmente, se llega a que ni G ni J logran adoptar este nuevo comportamiento, dado que ambos tienen 3 vecinos de los cuales sólo 1 adoptó el comportamiento A. De esta forma, tampoco será posible que D o H adopten el comportamiento A, ya que ambos tienen 2 vecinos que no lo adoptaron.  
+
+El comportamiento de A no se propaga por toda la red dado que la situación inicial presentaba dos clusters, en donde sólo el cluster izquierdo poseía _early adopters_. De esta forma, la información sobre la existencia del comportamiento A llegó a algunos nodos del cluster derecho mediante puentes/lazos débiles, pero sin alcanzar la cantidad mínima de vecinos que debían adoptar el comportamiento para que estos nodos también lo adopten.  
+De esta forma, para que el comportamiento A se expanda por el resto de la red, otro _early adopter_ debería estar presente en el cluster derecho para que el comportamiento A se propague por toda la red. Más aún, el _early adopter_ podría ser cualquier nodo del cluster derecho.  
+
+
 
 ### **4**
 
