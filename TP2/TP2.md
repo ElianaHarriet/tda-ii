@@ -43,8 +43,8 @@ D = 1 + 2 + 3 = 6 \newline
 \rightarrow Gana D.
 $
 
-***Eliminaciones sucesivas***  
-Se eliminan los candidatos en rondas de a pares de candidatos. Asume que el candidato que gana en un enfrentamiento contra otro candidato, gana también contra todos los candidatos que perdió el otro candidato.  
+***Buscando que gane A -> Eliminaciones sucesivas***  
+Se eliminan los candidatos en rondas de a pares de candidatos. Asume que si un candidato gana en un enfrentamiento contra otro candidato B, ganaría también contra todos los candidatos que ganó el candidato B.  
 Orden de rondas: D C B A
 
 _Ronda 1: D contra C_  
@@ -71,7 +71,7 @@ Jurado\; 3: Gana A \newline
 \rightarrow Gana A.
 $
 
-Al ganar A no se está cumpliendo la propiedad de ser Pareto-Eficiente ya que el orden relativo $D \succ A$, presente en las preferencias de cada uno de los jurados, no se respeta.  
+Al ganar A no se está cumpliendo la propiedad de ser Pareto-Eficiente ya que el orden relativo $D \succ A$, presente en las preferencias de cada uno de los jurados, no se respeta en el resultado.  
 
 ### **2**
 
