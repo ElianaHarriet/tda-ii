@@ -75,7 +75,17 @@ Al ganar A no se está cumpliendo la propiedad de ser Pareto-Eficiente ya que el
 
 ### **2**
 
-#TODO  
+Dado el modelo de cascada de información visto en clase. A partir de ahora llamamos $T$ a la nueva tecnología. Vamos a analizar como actúan los individuos de la red ante una nueva tecnología. Cada individuo puede aceptar o rechazar $T$. Si acepta, recibe una ganancia $g$ aleatoria que puede ser positiva o negativa. Si rechaza, recibe una ganancia $g=0$.
+
+Si $T = "Mala".$ Entonces sabemos que el promedio de ganancias entre los que aceptaron $T$ será **negativo**. De esta forma, que el primer individuo que acepte la tecnología, seguramente tendra una ganancia negativa. Luego, los siguientes individuos podran aceptar $T$ o rechazarla, conociendo las ganancias de los demás y sabiendo el promedio de las mismas. Si el promedio es negativo, entonces es más probable que un individuo a la hora de elegir, tenga preferencia por rechazar la tecnología en vez de aceptarla, lo cual "frena" la potencial formación de una cascada para que persista $T$. 
+
+Podemos ver por ejemplo, que si los primeros individuos que acepten tienen malas experiencias $(g<0)$, cada vez es menos probable que los siguientes acepten la tecnologia, pudiendo llegar al punto de formar una cascada de Rechazo, si la cantidad de malas experiencias (o la importancia de las mismas) es suficiente. 
+
+Esto se corresponde con lo que experimentamos en la realidad. Si un solo amigo mío probó un juego nuevo y no le gustó, quizás me desanime a probarlo, pero aún es posible que le de una oportunidad. En cambio si muchos/todos mis amigos tuvieron malas experiencias, probablemente ni siquiera pruebe el juego.
+
+Por otro lado, si $T = "Buena"$. Entonces cuando un individuo deba elegir, va a notar que en promedio, las ganancias/experiencias de los que adoptaron $T$ antes son más positivas que negativas, lo que nos incentiva a Aceptar esta nueva tecnología. Podemos pensar también, que la primer persona que acepte $T$ tendra una ganancia positiva, por lo que la persona siguiente probablemente optará por aceptarla también. Y aunque algunos individuos hayan tenido malas experiencias (ganancias negativas), habrá mayor tendencia a adoptar la nueva tecnología por ser "Buena" que a rechazarla.
+
+De esta forma, vemos que no debería/es poco probable que surja una cascada de rechazo si la tecnología es Buena. 
 
 ### **3**
 
