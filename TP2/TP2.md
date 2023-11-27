@@ -114,4 +114,15 @@ De esta forma, para que el comportamiento A se expanda por el resto de la red, o
 
 ### **5**
 
-#TODO  
+Teniendo un [set de datos de reviews de Amazon](https://www.kaggle.com/datasets/saurav9786/amazon-product-reviews), se analizó el comportamiento de los usuarios y se calcularon las métricas de justicia (de un usuario), valor (de un producto) y de confianza (de una review a un producto de determinado usuario) usando el agloritmo REV2.  
+
+Como resultado se obtuvo que los usuarios maliciosos con al menos 5 reviews son:
+- 'A2G4GBZBU0191J' (fairness = 0.21)
+- 'A3ECP9FPY96ST2' (fairness = 0.22)
+- 'A135DQ1W2SWG7R' (fairness = 0.22)
+- 'A3VQ1D0OILACKN' (fairness = 0.23)
+- 'A3VNX3A8V805AL' (fairness = 0.24)
+- 'A1ILBK17KOOOYN' (fairness = 0.25)
+
+Respecto a los extremadamente justos (nodos con al menos 0.9 de fairness), se obtuvo que el 0.59% de los usuarios son extremadamente justos (375 usuarios, siendo un total de 63175 usuarios en la red).  
+> Tanto la implementación del algoritmo, como los resultados obtenidos, se encuentran en el notebook [REV2 - Amazon reviews](https://www.kaggle.com/code/elianaharriet/rev2-amazon-reviews).
