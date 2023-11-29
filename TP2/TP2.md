@@ -110,7 +110,23 @@ De esta forma, para que el comportamiento A se expanda por el resto de la red, o
 
 ### **4**
 
-#TODO  
+'''
+Buenas, perdon que vuelva a molestar. Estoy con el 4.a. Lo que tengo en mente es que los grafos que cumplen con la Ley de Potencias (como los del modelo de little world) tienen diametro bajo y coeficiente de Clustering alto, con lo que al virus le tomaria pocos "saltos" llegar a todos los nodos del grafo y rapidamente creceria la cantidad de infectados (diria que hasta de forma exponencial), mientras que en un grafo aleatorio de ER no podemos asegurar que eso pase, ya que el coeficiente de Clustering depende del grado promedio y la cantidad de nodos, y puede ser alto o bajo segun la p con la que se cree el grafo, con lo que diria que es mas probable que ocurra una epidemia en un grafo que cumpla Ley de Potencias
+'''
+
+Los grafos que cumplen con la Ley de Potencias (como los del modelo de mundo pequeño) tienen diámetro bajo y coeficiente de Clustering alto. Lo que indica qeu a un virus le tomaría pocos "saltos" o iteraciones llegar a todos los nodos del grafo, siendo más probable que llegue a infecta a todos los nodos rápidamente y de esta forma que crezca la cantidad de nodos infectados en simultaneo. 
+
+Por otro lado, en un grafo aleatorio de ER, el coeficiente de Clustering esperado es aproximadamente:
+$$E[C] \approx \frac{\hat{k}}{n}.$$
+De modo que el mismo depende del grado promedio y la cantidad de nodos, pudiendo ser más alto o bajo dependiendo del valor de probabilidad con el que se generó el grafo aleatorio. Por lo tanto, no tenemos la certeza de que $G_1$ tenga un coeficiente de Clustering alto o bajo.
+
+De esta forma, si tomaramos un nodo aleatorío, podemos concluir que es más probable que ocurra un epidemia en $G_2$, ya que desde cualquier nodo del mismo, sería "fácil" llegar a todos los demás.
+
+Por otro lado, si la propagación del virus comenzara en el vértice de mayor grado **TODO parte b**.
+
+En cuanto a las comunidades, podemos decir con un alto grado de certeza que las mismas benefician a la expansión del virus, ya que una vez infectado uno o algunos pocos de los miembros de la comunidad, existen multiples "caminos" que el virus puede tomar para llegar a todos los demas miembros de la misma, facilitando la ocurrencia de una epidemia dentro de la comunidad. Otra forma de verlos es que dentro de las comunidades, es altamente probable que se cumpla la formación de triangulos dentro de la comunidad (Triadic Closure), por lo tanto los nodos infectados dentro de una gran comunidad tendrán probabilidad mayor de tener más aristas que los nodos que no pertenecen a una, facilitando la expansión del virus.
+
+Cabe destacar, que los valores de $\beta$ y $\delta$ del modelo **SIR** no deberían influir en estos resultados, ya ambos grafos deben ser sometidos a las mismas instancias del virus.
 
 ### **5**
 
