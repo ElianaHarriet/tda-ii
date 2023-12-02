@@ -4,72 +4,58 @@
 ### **1**
 
 Se quiere convocar a una elección a la que se presentan 4 candidatos (A, B, C y D). Hay 3 votantes del jurado que tienen sus siguientes rankings individuales:  
-$$
-Jurado\; 1: B \succ C \succ D \succ A \newline
-Jurado\; 2: C \succ D \succ A \succ B \newline 
-Jurado\; 3: D \succ A \succ B \succ C \newline
-$$
+$$ Jurado\; 1: B \succ C \succ D \succ A $$
+$$ Jurado\; 2: C \succ D \succ A \succ B $$
+$$ Jurado\; 3: D \succ A \succ B \succ C $$
 
 ***Eliminación iterativa***  
 En cada iteración se elimina el candidato con menor cantidad de votos.
 
 _Iteración 1_  
-$
-A: 0 \newline
-B: 1 \newline
-C: 1 \newline
-D: 1 \newline
-\rightarrow Se\; elimina\; A.
-$  
-$
-Jurado\; 1: B \succ C \succ D \newline
-Jurado\; 2: C \succ D \succ B \newline 
-Jurado\; 3: D \succ B \succ C \newline
-$
+$$ A: 0 $$
+$$ B: 1 $$
+$$ C: 1 $$
+$$ D: 1 $$
+$$ \rightarrow Se\; elimina\; A.$$ 
+$$ Jurado\; 1: B \succ C \succ D $$
+$$ Jurado\; 2: C \succ D \succ B $$
+$$ Jurado\; 3: D \succ B \succ C $$
 
 _Iteración 2_  
-$
+$$
 \rightarrow\; Todos\; los\; candidatos\; tienen\; la\; misma\; cantidad\; de\; votos.\; No\; se\; elimina\; ningún\; candidato.
-$
+$$
 
 ***Borda Rule***  
 Se asigna un puntaje a cada candidato según la posición en la que se encuentra en el ranking de cada votante.
 Asumo que son 3 puntos para el primero, 2 para el segundo, 1 para el tercero y 0 para el cuarto.  
-$
-A = 0 + 1 + 2 = 3 \newline
-B = 3 + 0 + 1 = 4 \newline
-C = 2 + 3 + 0 = 5 \newline
-D = 1 + 2 + 3 = 6 \newline
-\rightarrow Gana D.
-$
+$$ A = 0 + 1 + 2 = 3 $$
+$$ B = 3 + 0 + 1 = 4 $$
+$$ C = 2 + 3 + 0 = 5 $$
+$$ D = 1 + 2 + 3 = 6 $$
+$$ \rightarrow Gana D. $$
 
 ***Buscando que gane A -> Eliminaciones sucesivas***  
 Se eliminan los candidatos en rondas de a pares de candidatos. Asume que si un candidato gana en un enfrentamiento contra otro candidato B, ganaría también contra todos los candidatos que ganó el candidato B.  
 Orden de rondas: D C B A
 
 _Ronda 1: D contra C_  
-$
-Jurado\; 1: Gana C \newline
-Jurado\; 2: Gana C \newline
-Jurado\; 3: Gana D \newline
-\rightarrow Gana C.
-$
+$$ Jurado\; 1: Gana C $$
+$$ Jurado\; 2: Gana C $$
+$$ Jurado\; 3: Gana D $$
+$$ \rightarrow Gana C.$$
 
 _Ronda 2: C contra B_  
-$
-Jurado\; 1: Gana B \newline
-Jurado\; 2: Gana C \newline
-Jurado\; 3: Gana B \newline
-\rightarrow Gana B.
-$
+$$ Jurado\; 1: Gana B $$
+$$ Jurado\; 2: Gana C $$
+$$ Jurado\; 3: Gana B $$
+$$ \rightarrow Gana B.$$
 
 _Ronda 3: B contra A_  
-$
-Jurado\; 1: Gana B \newline
-Jurado\; 2: Gana A \newline 
-Jurado\; 3: Gana A \newline
-\rightarrow Gana A.
-$
+$$ Jurado\; 1: Gana B $$
+$$ Jurado\; 2: Gana A $$
+$$ Jurado\; 3: Gana A $$
+$$ \rightarrow Gana A.$$
 
 Al ganar A no se está cumpliendo la propiedad de ser Pareto-Eficiente ya que el orden relativo $D \succ A$, presente en las preferencias de cada uno de los jurados, no se respeta en el resultado.  
 
