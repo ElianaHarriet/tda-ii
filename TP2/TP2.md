@@ -117,6 +117,7 @@ Finalmente, en cuanto a las simulaciones para contrastar y analizar los resultad
 Teniendo un [set de datos de reviews de Amazon](https://www.kaggle.com/datasets/saurav9786/amazon-product-reviews), se analizó el comportamiento de los usuarios y se calcularon las métricas de justicia (de un usuario), valor (de un producto) y de confianza (de una review a un producto de determinado usuario) usando el agloritmo REV2.  
 
 Como resultado se obtuvo que los usuarios maliciosos con al menos 5 reviews son:
+
 - 'A2G4GBZBU0191J' (fairness = 0.21)
 - 'A3ECP9FPY96ST2' (fairness = 0.22)
 - 'A135DQ1W2SWG7R' (fairness = 0.22)
