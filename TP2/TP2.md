@@ -4,72 +4,58 @@
 ### **1**
 
 Se quiere convocar a una elección a la que se presentan 4 candidatos (A, B, C y D). Hay 3 votantes del jurado que tienen sus siguientes rankings individuales:  
-$$
-Jurado\; 1: B \succ C \succ D \succ A \newline
-Jurado\; 2: C \succ D \succ A \succ B \newline 
-Jurado\; 3: D \succ A \succ B \succ C \newline
-$$
+$$ Jurado\; 1: B \succ C \succ D \succ A $$
+$$ Jurado\; 2: C \succ D \succ A \succ B $$
+$$ Jurado\; 3: D \succ A \succ B \succ C $$
 
 ***Eliminación iterativa***  
 En cada iteración se elimina el candidato con menor cantidad de votos.
 
 _Iteración 1_  
-$
-A: 0 \newline
-B: 1 \newline
-C: 1 \newline
-D: 1 \newline
-\rightarrow Se\; elimina\; A.
-$  
-$
-Jurado\; 1: B \succ C \succ D \newline
-Jurado\; 2: C \succ D \succ B \newline 
-Jurado\; 3: D \succ B \succ C \newline
-$
+$$ A: 0 $$
+$$ B: 1 $$
+$$ C: 1 $$
+$$ D: 1 $$
+$$ \rightarrow Se\; elimina\; A.$$ 
+$$ Jurado\; 1: B \succ C \succ D $$
+$$ Jurado\; 2: C \succ D \succ B $$
+$$ Jurado\; 3: D \succ B \succ C $$
 
 _Iteración 2_  
-$
+$$
 \rightarrow\; Todos\; los\; candidatos\; tienen\; la\; misma\; cantidad\; de\; votos.\; No\; se\; elimina\; ningún\; candidato.
-$
+$$
 
 ***Borda Rule***  
 Se asigna un puntaje a cada candidato según la posición en la que se encuentra en el ranking de cada votante.
 Asumo que son 3 puntos para el primero, 2 para el segundo, 1 para el tercero y 0 para el cuarto.  
-$
-A = 0 + 1 + 2 = 3 \newline
-B = 3 + 0 + 1 = 4 \newline
-C = 2 + 3 + 0 = 5 \newline
-D = 1 + 2 + 3 = 6 \newline
-\rightarrow Gana D.
-$
+$$ A = 0 + 1 + 2 = 3 $$
+$$ B = 3 + 0 + 1 = 4 $$
+$$ C = 2 + 3 + 0 = 5 $$
+$$ D = 1 + 2 + 3 = 6 $$
+$$ \rightarrow Gana D. $$
 
 ***Buscando que gane A -> Eliminaciones sucesivas***  
 Se eliminan los candidatos en rondas de a pares de candidatos. Asume que si un candidato gana en un enfrentamiento contra otro candidato B, ganaría también contra todos los candidatos que ganó el candidato B.  
 Orden de rondas: D C B A
 
 _Ronda 1: D contra C_  
-$
-Jurado\; 1: Gana C \newline
-Jurado\; 2: Gana C \newline
-Jurado\; 3: Gana D \newline
-\rightarrow Gana C.
-$
+$$ Jurado\; 1: Gana C $$
+$$ Jurado\; 2: Gana C $$
+$$ Jurado\; 3: Gana D $$
+$$ \rightarrow Gana C.$$
 
 _Ronda 2: C contra B_  
-$
-Jurado\; 1: Gana B \newline
-Jurado\; 2: Gana C \newline
-Jurado\; 3: Gana B \newline
-\rightarrow Gana B.
-$
+$$ Jurado\; 1: Gana B $$
+$$ Jurado\; 2: Gana C $$
+$$ Jurado\; 3: Gana B $$
+$$ \rightarrow Gana B.$$
 
 _Ronda 3: B contra A_  
-$
-Jurado\; 1: Gana B \newline
-Jurado\; 2: Gana A \newline 
-Jurado\; 3: Gana A \newline
-\rightarrow Gana A.
-$
+$$ Jurado\; 1: Gana B $$
+$$ Jurado\; 2: Gana A $$
+$$ Jurado\; 3: Gana A $$
+$$ \rightarrow Gana A.$$
 
 Al ganar A no se está cumpliendo la propiedad de ser Pareto-Eficiente ya que el orden relativo $D \succ A$, presente en las preferencias de cada uno de los jurados, no se respeta en el resultado.  
 
@@ -110,13 +96,28 @@ De esta forma, para que el comportamiento A se expanda por el resto de la red, o
 
 ### **4**
 
-#TODO  
+Los grafos que cumplen con la Ley de Potencias (como los del modelo de mundo pequeño) tienen diámetro bajo y coeficiente de Clustering alto. Lo que indica qeu a un virus le tomaría pocos "saltos" o iteraciones llegar a todos los nodos del grafo, siendo más probable que llegue a infecta a todos los nodos rápidamente y de esta forma que crezca la cantidad de nodos infectados en simultaneo. 
+
+Por otro lado, en un grafo aleatorio de ER, el coeficiente de Clustering esperado es aproximadamente:
+$$E[C] \approx \frac{\hat{k}}{n}.$$
+De modo que el mismo depende del grado promedio y la cantidad de nodos, pudiendo ser más alto o bajo dependiendo del valor de probabilidad con el que se generó el grafo aleatorio. Por lo tanto, no tenemos la certeza de que $G_1$ tenga un coeficiente de Clustering alto o bajo.
+
+De esta forma, si tomaramos un nodo aleatorío, podemos concluir que es más probable que ocurra un epidemia en $G_2$, ya que desde cualquier nodo del mismo, sería "fácil" llegar a todos los demás.
+
+Por otro lado, si la propagación del virus comenzara en el vértice de mayor grado la idea que se nos ocurre es que en los grafos que cumplen ley de potencias, al tener la caracteristica de la "Heavy Tail", siempre tenemos probabilidad de que el nodo con mayor grado del grafo sea efectivamente un nodo con un grado muy alto, por lo tanto seguiría siendo más probable que la epidemia ocurra en este tipo de grafos con más facilidad que en un grafo aleatorio de Erdös-Rényi.
+
+En cuanto a las comunidades, podemos decir con un alto grado de certeza que las mismas benefician a la expansión del virus, ya que una vez infectado uno o algunos pocos de los miembros de la comunidad, existen multiples "caminos" que el virus puede tomar para llegar a todos los demas miembros de la misma, facilitando la ocurrencia de una epidemia dentro de la comunidad. Otra forma de verlos es que dentro de las comunidades, es altamente probable que se cumpla la formación de triangulos dentro de la comunidad (Triadic Closure), por lo tanto los nodos infectados dentro de una gran comunidad tendrán probabilidad mayor de tener más aristas que los nodos que no pertenecen a una, facilitando la expansión del virus.
+
+Cabe destacar, que los valores de $\beta$ y $\delta$ del modelo **SIR** no deberían influir en estos resultados, ya ambos grafos deben ser sometidos a las mismas instancias del virus.
+
+Finalmente, en cuanto a las simulaciones para contrastar y analizar los resultados, implementamos un modelo para realizar las simulaciones de propagación de un virus SIR en grafos de networkx en el siguiente [collab](https://colab.research.google.com/drive/1Xhgcst_V3k5-V6ALBOYdPdGvYd1fpTCb?usp=sharing). Sin embargo, luego de varias ejecuciones con distintos parámetros, no logramos visualizar diferencias notables entre un modelo y otro.
 
 ### **5**
 
 Teniendo un [set de datos de reviews de Amazon](https://www.kaggle.com/datasets/saurav9786/amazon-product-reviews), se analizó el comportamiento de los usuarios y se calcularon las métricas de justicia (de un usuario), valor (de un producto) y de confianza (de una review a un producto de determinado usuario) usando el agloritmo REV2.  
 
 Como resultado se obtuvo que los usuarios maliciosos con al menos 5 reviews son:
+
 - 'A2G4GBZBU0191J' (fairness = 0.21)
 - 'A3ECP9FPY96ST2' (fairness = 0.22)
 - 'A135DQ1W2SWG7R' (fairness = 0.22)
