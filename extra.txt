@@ -1,0 +1,10 @@
+Tyrion-Lannister
+Robert-Baratheon
+Stannis-Baratheon
+Jon-Snow	Jon-Sn
+Eddard-Stark	Ed
+Joffrey-Baratheon
+Barristan-Selmy	Ba
+Jaime-Lannister	Ja
+Daenerys-Targaryen
+Tywin-Lannister	Ty

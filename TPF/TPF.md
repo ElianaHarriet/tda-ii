@@ -1,9 +1,7 @@
 # Teoría de Algoritmos II (75.30)
 ## Trabajo Práctico Final
 
-### Integrantes
-- [107205 - Eliana Harriet](https://github.com/ElianaHarriet)
-- [107754 - Marcos Bat Mentzel](https://github.com/marcosbatm)
+[107205 - Eliana Harriet](https://github.com/ElianaHarriet)
 
 ### Origen de los datos
 
@@ -277,12 +275,151 @@ En estas métricas no hay diferencias tan grandes como las anteriores, pero se p
 
 Sumando ambas características, se puede ver que el entorno de Sansa se caracteriza por tener un grueso de personajes de alta importancia, mientras que el entorno de Arya se caracteriza por poder moverse entre los hilos de la historia pudiendo no ser reconocida por los personajes que se encuentre. Es así como Sansa termina siendo un títere de su entorno, teniendo que meditar sin mucho éxito cada movimiento, mientras que Arya resulta un ser más libre que a lo largo de la historia aprende a jugar con los pesos de su entorno manejando cada peligro que se le presenta.  
 
+## Análisis de los personajes individualmente
 
-## centralidad
-## eigenvector centrality y eccentricity
-## coef clust por nodo
+### Métricas sobre el grafo completo
 
-## agrupar personajes -> analizar comunidades (ej analizar la red según las casas) y roles
+Al momento de analizar los personajes individualmente hay distintas métricas a tomar en cuenta. En principio, se puede analizar el grado de cada personaje, lo cual nos indica la cantidad de interacciones que tiene el personaje con otros personajes, pero no nos indica la importancia de los personajes con los que interactúa o si estos personajes a su vez pueden estar conectados a otros de importancia y contribuir a la influencia del personaje en cuestión.   
+Para esto, se pueden analizar distintas métricas de centralidad e importancia. En particular, se analizarán distintas métricas de forma gráfica directamente sobre la red, y luego se analizará más a fondo aquellos personajes que se destaquen en las métricas.  
+
+**::Grados::**  
+El grado de un nodo es la cantidad de aristas que lo conectan con otros nodos. En el caso de la red de personajes, el grado de un personaje es la cantidad de interacciones que tiene con otros personajes.
+![Grafo coloreado según grados](src/images/graph_by_connections.png)
+Se puede ver como destacan los siguientes personajes:
+1. Tyrion Lannister
+2. Jon Snow
+3. Jaime Lannister
+4. Cersei Lannister
+5. Stannis Baratheon
+6. Arya Stark
+7. Catelyn Stark
+8. Eddard Stark
+9. Sansa Stark
+10. Robb Stark
+
+**::Grados con pesos::**  
+El grado con pesos de un nodo es la suma de los pesos de las aristas que lo conectan con otros nodos. En el caso de la red de personajes, el grado con pesos de un personaje es la suma de las interacciones que tiene con otros personajes.
+![Grafo coloreado según grados con pesos](src/images/degrees_by_weights.png)
+Se puede ver como destacan los siguientes personajes:
+1. Tyrion Lannister
+2. Jon Snow
+3. Cersei Lannister
+4. Joffrey Baratheon
+5. Edddard Stark
+6. Daenerys Targaryen
+7. Jaime Lannister
+8. Sansa Stark
+9. Bran Stark
+10. Robert Baratheon
+
+Aquí sorprende cómo es que aparece Bran, pero al analizarlo más a fondo se puede ver que es debido a que Bran tiene una gran cantidad de interacciones con los personajes de su entorno, pero no tiene interacciones con personajes de otros entornos. 
+
+**::Betweenness centrality::**  
+Es una medida de centralidad en un grafo basada en los caminos más cortos, esta medida para cada nodo es la cantidad de caminos más cortos que pasan por el mismo.  
+![betweenness](src/images/betweenness_centrality.png)  
+Se puede ver como destacan los siguientes personajes:
+1. Jon Snow
+2. Tyrion Lannister
+3. Daenerys Targaryen
+4. Theon Greyjoy
+5. Stanis Baratheon
+6. Jaime Lannister
+7. Cersei Lannister
+8. Arya Stark
+9. Eddard Stark
+10. Robert Baratheon
+
+Estos personajes se destacan por ser personajes que se mueven mucho a lo largo de la historia, y que además tienen un rol importante en la misma. Las únicas excepciones son Theon Greyjoy y Cersei Lannister, que si bien no se mueven tanto como los demás, tienen un rol importante en la historia.  
+
+**::Eigenvector centrality::**  
+Es una medida de influencia de un nodo en una red. Los puntajes relativos se asignan a todos los nodos de la red en base al concepto de que las conexiones a nodos de alto puntaje contribuyen más al puntaje del nodo en cuestión que las conexiones iguales a nodos de bajo puntaje. Un puntaje alto de eigenvector significa que un nodo está conectado a muchos nodos que a su vez tienen puntajes altos.  
+![eigenvector](src/images/eigenvector_centrality.png)
+Se puede ver como destacan los siguientes personajes:
+1. Tyrion Lannister
+2. Cersei Lannister
+3. Jaime Lannister
+4. Joffrey Baratheon
+5. Sansa Stark
+6. Robert Baratheon
+7. Eddard Stark
+8. Stannis Baratheon
+9. Catelyn Stark
+10. Robb Stark
+
+Estos personajes se destacan por su alto poder político o militar, en todos los casos son personajes que ocuparon el trono de hierro (Joffrey, Robert), son herederos al mismo o se proclaman rey (Stannis, Robb), tuvieron una fuerte influencia sobre un rey (Cersei, Jaime, Eddard, Catelyn), o son instrumentos de poder (Sansa). En el caso de Tyrion, tiene un alto poder político debido a ser un Lannister, pero además tiene un alto poder militar debido a su rol como estratega y tener muy poco para perder.  
+
+### Métricas sobre un grafo selecto
+A continuación se analizarán las métricas sobre un grafo selecto, en particular, los personajes con mayor presencia e importancia en la historia. Para ello se tomaron todas las métricas anteriores para hacer un filtrado de los nodos menos importantes y quedarse con los más relevantes. La idea principal es ver cómo se dan las métricas anteriores dentro de una red de sólo personajes de alta importancia.
+
+**::Grados::**
+![Grafo coloreado según grados](src/images/most_important.png)
+Se puede ver como destacan los siguientes personajes:
+1. Tyrion Lannister
+2. Robert Baratheon
+3. Cersei Lannister
+4. Eddard Stark
+5. Jaime Lannister
+6. Joffrey Baratheon
+7. Stannis Baratheon
+8. Robb Stark
+9. Sansa Stark
+10. Tywin Lannister
+
+**::Grados con pesos::**
+![Grafo coloreado según grados con pesos](src/images/selected_degrees_by_weights.png)
+Se puede ver como destacan los siguientes personajes:  
+1. Tyrion Lannister
+2. Cersei Lannister
+3. Jon Snow
+4. Joffrey Baratheon
+5. Eddard Stark
+6. Robert Baratheon
+7. Sansa Stark
+8. Robb Stark
+9. Stannis Baratheon
+10. Jaime Lannister
+
+**::Betweenness centrality::**
+![betweenness](src/images/selected_betweenness_centrality.png)
+Se puede ver como destacan los siguientes personajes:  
+1. Tyrion Lannister
+2. Robert Baratheon
+3. Stannis Baratheon
+4. Jon Snow
+5. Eddard Stark
+6. Joffrey Baratheon
+7. Barristan Selmy
+8. Jaime Lannister
+9. Daenerys Targaryen
+10. Tywin Lannister
+
+**::Eigenvector centrality::**
+![eigenvector](src/images/selected_eigenvector_centrality.png)
+Se puede ver como destacan los siguientes personajes:  
+1. Tyrion Lannister
+2. Robert Baratheon
+3. Cersei Lannister
+4. Jaime Lannister
+5. Edddard Stark
+6. Joffrey Baratheon
+7. Sansa Stark
+8. Stannis Baratheon
+9. Robb Stark
+10. Tywin Lannister
+
+De esta forma podemos sacar las siguientes conclusiones:
+- **Tyrion Lannister** es el personaje con más relevancia en la historia, en todas las métricas se encuentra en el primer puesto (con una sóla excepción para BC del grafo completo). Esto demuestra que Tyrion es un personaje con muchos lazos, y que además estos lazos son con personajes de alta relevancia. Sumado a esto, su inteligencia le da un rol de estratega capaz de cambiar el curso de la historia con sus decisiones y de recuperar el rumbo en caso de un cambio de curso inesperado y desfavorable.  
+- **Jon Snow** es un personajes con no muchas conexiones de importancia, pero las que tiene son reiteradas a lo largo de la historia (se ve en el cambio de métricas de grados entre el grafo completo y el grafo selecto).
+- Los hermanos **Jaime** y **Cersei** son influyentes en la historia, manteniendo un rango de importancia similar a pesar de estar en dos escenarios diferentes. Cersei se encuentra en Desembarco del Rey, mientras que Jaime se encuentra escapando del entorno de Robb Stark como prisionero de guerra protegido por Brienne de Tarth. Esto invita a pensar que no sólo son personajes influyentes, sino que sus situaciones pueden no ser tan diferentes como aparentan: Cersei en realidad es prisionera de su alta posición, sin poder ejercer realmente el poder debido a las consideraciones de su entorno por sobre las mujeres, mientras que Jaime a lo largo de la historia comienza a acomodarse en su posición y ganando libertades a medida que afrenta junto a Brienne los peligros que se le presentan.  
+- **Arya Stark** es un personaje muy capaz, esto se ve debido a la gran cantidad de conexiones y avance a lo largo de la historia. Volviéndose un personaje de importancia por mérito propio y no por conexiones de alta importancia. Esto además es una ventaja, ya que tener conexiones de importancia puede resultar peligroso, de esta forma Arya puede moverse con mayor libertad.
+- **Sansa Stark** de forma opuesta a Arya, aparece en mayores tops de las métricas. Esto permite ver cómo Sansa es un elemento de la política manejado por su difícil entorno, en donde cada movimiento que hace puede ser crucial para su supervivencia.
+- **Catelyn** y **Robb Stark** son personajes que se mantienen en distintos tops de las métricas, pero no en todos. Esto da contexto a las conexiones necesarias para que Robb se convierta en rey en el norte, pero también da contexto a la muerte de Robb y Catelyn, ya que no son personajes que se encuentren en todos los tops de las métricas. Esto permite ver cómo la muerte de Robb y Catelyn es un hecho de alta importancia para sus casas enemigas y el por qué fue planeado con tanto cuidado para evitar _salpicarse_.
+- **Stannis Baratheon** es un personaje que se encuentra en los tops de las métricas, pero no en todos. Esto permite ver cómo Stannis es un personaje que se encuentra en una posición de poder, pero que no tiene la influencia suficiente para ser un personaje de mayor importancia. Esto da contexto a por qué le es tan difícil a Stannis conseguir aliados para su causa y acercarse al trono de hierro.
+- **Eddard Stark** y **Robert Baratheon** son personajes que se encuentran en los tops de las métricas, pero no en todos. Esto permite ver cómo son personajes que se encuentran en una posición de alto poder, pero efímero. Ya que ambos mueren al principio de la historia, pero sus muertes son el punto de partida de la misma.
+- **Joffrey Baratheon**, **Theon Greyjoy** y **Tywin Lannister** son personajes que se encuentran en los tops de las métricas, pero no en todos. Esto se debe a que son personajes que tuvieron poder o influencia en determindos momentos de la historia. En el caso particular de Twin, se puede ver cómo su influencia surge dentro del grafo selecto, esto se debe a que su influencia se da a partir de la muerte de Eddard Stark y por sobre un grupo selecto de personajes (por sobre todo su hija Cersei). Esto permite ver cómo Tywin es un estratega bajo las sombras, muy simliar a Tyrion, pero con una influencia más enfocada sobre los personajes cercanos al trono (incluso fue mano del rey en su momento).
+- **Daenerys Targaryen** es un personaje que se encuentra en algunos tops. Esto se debe a que su historia se mantiene alejada de Westeros en la gran mayoria de la historia, incluso muchos no saben su nombre. De esta forma, Daenerys es un personaje de alto poder e influencia sólo dentro de su entorno y ocasionalmente por fuera del mismo.
+
+# ***Beep boop, estoy trabajando en esto*** 👇🏻
 
 ## analizar la red según los libros (ver la oportunidad de comparar la evolución entre distintos libros)
 
@@ -290,6 +427,14 @@ Sumando ambas características, se puede ver que el entorno de Sansa se caracter
 
 ## análisis siguendo x personajes
 
-## subred con los más importantes
+## Comparaciones con Erdös-Rényi y Preferential Attachment
 
-## etc
+## Epidemias en got -> enfermedades, lineas de pensamiento, etc
+
+## deteccion de brotes ??
+
+## epidemias/brotes/otro como deteccion de compartir algo aka aliarse
+
+## evolución de la red -> nuevos enlaces
+
+## cosas de los últimos temas
