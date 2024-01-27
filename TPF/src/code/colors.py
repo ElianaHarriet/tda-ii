@@ -4,26 +4,10 @@ GRAPH_CSV_PATH = "TPF/src/asoiaf-all-edges.csv"
 COLORS_PATH = "TPF/src/gephi/colors_by_clusters.txt"
 TOP_NODES = 10
 
-def get_groups(path):
-    groups = {}
-    with open(path, 'r') as f:
-        for line in f:
-            name, group = line.split(":rgb:")
-            group = group.replace("\n", "")
-            groups[group] = groups.get(group, []) + [name]
-    return list(groups.values())
-
-def get_top_nodes(graph, group):
-    nodes = []
-    for node in group:
-        nodes.append((node, graph.degree(node)))
-    nodes.sort(key=lambda x: x[1], reverse=True)
-    nodes = list(map(lambda x: x[0], nodes))
-    return nodes[:TOP_NODES]
-
 def main():
     print("Loading graph...")
-    groups = get_groups(COLORS_PATH)
+    groups_dict = lib.get_groups(COLORS_PATH)
+    groups = list(groups_dict.values())
     graph = lib.load_nx_graph(GRAPH_CSV_PATH, ",", "Source", "Target", "weight", False)
     print("Graph loaded successfully")
     
@@ -39,7 +23,7 @@ def main():
             print(f"\tTop {TOP_NODES} nodes:")
         else:
             print("\tNodes:")
-        nodes = "\n\t - ".join(get_top_nodes(graph, groups[i]))
+        nodes = "\n\t - ".join(lib.get_top_nodes(graph, groups[i], TOP_NODES))
         print(f"\t - {nodes}")
 
 if __name__ == "__main__":
