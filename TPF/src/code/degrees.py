@@ -1,5 +1,5 @@
 import statistics
-import networkx as nx
+# import networkx as nx
 import lib
 
 GRAPH_CSV_PATH = "TPF/src/asoiaf-all-edges.csv"

@@ -419,6 +419,67 @@ De esta forma podemos sacar las siguientes conclusiones:
 - **Joffrey Baratheon**, **Theon Greyjoy** y **Tywin Lannister** son personajes que se encuentran en los tops de las métricas, pero no en todos. Esto se debe a que son personajes que tuvieron poder o influencia en determindos momentos de la historia. En el caso particular de Twin, se puede ver cómo su influencia surge dentro del grafo selecto, esto se debe a que su influencia se da a partir de la muerte de Eddard Stark y por sobre un grupo selecto de personajes (por sobre todo su hija Cersei). Esto permite ver cómo Tywin es un estratega bajo las sombras, muy simliar a Tyrion, pero con una influencia más enfocada sobre los personajes cercanos al trono (incluso fue mano del rey en su momento).
 - **Daenerys Targaryen** es un personaje que se encuentra en algunos tops. Esto se debe a que su historia se mantiene alejada de Westeros en la gran mayoria de la historia, incluso muchos no saben su nombre. De esta forma, Daenerys es un personaje de alto poder e influencia sólo dentro de su entorno y ocasionalmente por fuera del mismo.
 
+## Comparación con redes generadas de forma aleatoria
+
+**Erdös-Rényi** es un modelo de red aleatoria en donde se generan aristas entre los nodos con una probabilidad p.  
+**Preferential Attachment** es un modelo de red aleatoria en donde se generan aristas entre los nodos con una probabilidad proporcional al grado de los nodos.  
+**Distancia del coseno** es una medida de similitud entre dos vectores en un espacio multidimensional. En el caso de las redes, se utiliza para medir la similitud entre dos anonymous walks.  
+
+Para comparar la red de personajes con redes generadas de forma aleatoria, se generaron dos redes aleatorias, una con el modelo de Erdös-Rényi y otra con el modelo de Preferential Attachment. Luego se generaron anonymous walks sobre las redes aleatorias y se compararon con los anonymous walks sobre la red de personajes utilizando la distancia del coseno.  
+A continuación se muestran dos resultados obtenidos para anonymous walks de 4 nodos (se intentó correr con más pero la pc no aguantó).  
+```
+Grafo cargado ✔
+Simulación de un modelado de Erdös-Rényi ✔
+Simulación de un modelado de Preferential Attachment (ley de potencias) ✔
+Representación de anonymous walks de la red original (largo de 4 nodos) ✔
+Representación de anonymous walks del modelado de Erdös-Rényi (largo de 4 nodos) ✔
+Representación de anonymous walks del modelado de Preferential Attachment (largo de 4 nodos) ✔
+Distancia coseno entre la red original y el modelado de Erdös-Rényi: 0.0005318079958945843
+Distancia coseno entre la red original y el modelado de Preferential Attachment: 0.0006976753088120402
+```
+```
+Grafo cargado ✔
+Simulación de un modelado de Erdös-Rényi ✔
+Simulación de un modelado de Preferential Attachment (ley de potencias) ✔
+Representación de anonymous walks de la red original (largo de 4 nodos) ✔
+Representación de anonymous walks del modelado de Erdös-Rényi (largo de 4 nodos) ✔
+Representación de anonymous walks del modelado de Preferential Attachment (largo de 4 nodos) ✔
+Distancia coseno entre la red original y el modelado de Erdös-Rényi: 0.0005400330220748373
+Distancia coseno entre la red original y el modelado de Preferential Attachment: 0.0008448615728700037
+```
+
+En ambos casos se tratan de simulaciones con una diferencia entre 0.0005 y 0.001, lo cual indica que las redes generadas de forma aleatoria son similares a la red de personajes. Esto indica dos cosas:  
+- La red de personajes dista de ser una red aleatoria, ya que la diferencia si bien es chica no es sumamente baja (como un caso de redes de aeropuertos analizada en un trabajo anterior, en donde la diferencia era de una magnitud de 10^-5).
+- Las simulaciones generadas no son del todo incorrectas, ya que tampoco es una diferencia grande la obtenida, de esta forma ambas podrían usarse como aproximaciones a la red de personajes.
+- Las redes generadas con Erdös-Rényi obtuvieron menores diferencias que las generadas con Preferential Attachment, esto indica que la red de personajes se asemeja más a una red en donde los nodos se conectan de forma aleatoria que a una red en donde los nodos se conectan de forma proporcional a la cantidad de conexiones que ya tienen.
+
+### Extra sobre las redes generadas
+
+Para ver un poco más en profundidad el comportamiento de la red de personajes, vamos a tomar el grafo de personajes selectos creado anteriormente y vamos a compararlo con las redes generadas de forma aleatoria.
+
+```
+Grafo cargado ✔
+Simulación de un modelado de Erdös-Rényi ✔
+Simulación de un modelado de Preferential Attachment (ley de potencias) ✔
+Representación de anonymous walks de la red original (largo de 4 nodos) ✔
+Representación de anonymous walks del modelado de Erdös-Rényi (largo de 4 nodos) ✔
+Representación de anonymous walks del modelado de Preferential Attachment (largo de 4 nodos) ✔
+Distancia coseno entre la red original y el modelado de Erdös-Rényi: 0.0021994336823688565
+Distancia coseno entre la red original y el modelado de Preferential Attachment: 0.00026055661266732866
+```
+```
+Grafo cargado ✔
+Simulación de un modelado de Erdös-Rényi ✔
+Simulación de un modelado de Preferential Attachment (ley de potencias) ✔
+Representación de anonymous walks de la red original (largo de 4 nodos) ✔
+Representación de anonymous walks del modelado de Erdös-Rényi (largo de 4 nodos) ✔
+Representación de anonymous walks del modelado de Preferential Attachment (largo de 4 nodos) ✔
+Distancia coseno entre la red original y el modelado de Erdös-Rényi: 0.0024188339101061107
+Distancia coseno entre la red original y el modelado de Preferential Attachment: 0.0002524831705156272
+```
+
+Para la red de personajes selectos se obtuvieron mejoras para el caso de Preferential Attachment, reduciendo la distancia coseno al grafo original, en cuanto a Erdös-Rényi se obtuvieron distancias mayores, lo cual indica que esta forma de simulación es menos eficaz para la red. De esto se puede concluir que dentro de los personajes más importantes, los personajes de mayor importancia (con mayor cantidad de conexiones) son más propensos a generar nuevas conexiones a lo largo de la historia.
+
 # ***Beep boop, estoy trabajando en esto*** 👇🏻
 
 ## analizar la red según los libros (ver la oportunidad de comparar la evolución entre distintos libros)
