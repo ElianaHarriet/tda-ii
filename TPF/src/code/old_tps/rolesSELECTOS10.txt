@@ -1,0 +1,36 @@
+Nodos con rol role_0:
+Tyrion-Lannister, 
+Promedio de grado: 44.0
+
+Nodos con rol role_1:
+Aegon-Targaryen-(son-of-Rhaegar), Rhaegar-Targaryen, Jon-Connington, Aemon-Targaryen-(Maester-Aemon), Samwell-Tarly, Jeor-Mormont, Jon-Arryn, Arianne-Martell, Myrcella-Baratheon, Doran-Martell, Balon-Swann, Yoren, Theon-Greyjoy, Ramsay-Snow, Melisandre, Lem, Gendry, Benjen-Stark, Asha-Greyjoy, Balon-Greyjoy, Jorah-Mormont, Daario-Naharis, Podrick-Payne, Lysa-Arryn, Edmure-Tully, Walder-Frey, Robert-Arryn, Margaery-Tyrell, Oberyn-Martell, Mace-Tyrell, Daenerys-Targaryen, Craster, Tormund, Drogo, Davos-Seaworth, Selyse-Florent, Wyman-Manderly, 
+Promedio de grado: 9.08108108108108
+
+Nodos con rol role_2:
+Janos-Slynt, Aerys-II-Targaryen, Jory-Cassel, 
+Promedio de grado: 12.666666666666666
+
+Nodos con rol role_4:
+Roose-Bolton, Rodrik-Cassel, Bran-Stark, 
+Promedio de grado: 17.666666666666668
+
+Nodos con rol role_5:
+Mance-Rayder, Barristan-Selmy, Stannis-Baratheon, 
+Promedio de grado: 23.0
+
+Nodos con rol role_6:
+Brienne-of-Tarth, Sandor-Clegane, Petyr-Baelish, Gregor-Clegane, Renly-Baratheon, Pycelle, Varys, 
+Promedio de grado: 20.428571428571427
+
+Nodos con rol role_7:
+Arya-Stark, Robb-Stark, Eddard-Stark, Tywin-Lannister, Jaime-Lannister, 
+Promedio de grado: 32.8
+
+Nodos con rol role_8:
+Robert-Baratheon, Jon-Snow, Tommen-Baratheon, Sansa-Stark, Cersei-Lannister, Joffrey-Baratheon, 
+Promedio de grado: 31.0
+
+Nodos con rol role_9:
+Victarion-Greyjoy, Quentyn-Martell, Hizdahr-zo-Loraq, Catelyn-Stark, 
+Promedio de grado: 10.25
+

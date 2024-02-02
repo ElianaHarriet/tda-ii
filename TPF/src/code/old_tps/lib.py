@@ -2,7 +2,7 @@ import grafo
 import csv
 import networkx as nx
 import random
-# from graphrole import RecursiveFeatureExtractor, RoleExtractor
+from graphrole import RecursiveFeatureExtractor, RoleExtractor
 
 def cargar_grafo(path, sep, origen, destino, peso, dirigido):
     """
@@ -128,18 +128,18 @@ def all_walks(grafo, n):
     
     return walks_n
 
-# def extraer_roles(grafo, n_roles):
-#     # Se extraen las características principales del grafo
-#     feature_extractor = RecursiveFeatureExtractor(grafo)
-#     features = feature_extractor.extract_features()
+def extraer_roles(grafo, n_roles):
+    # Se extraen las características principales del grafo
+    feature_extractor = RecursiveFeatureExtractor(grafo)
+    features = feature_extractor.extract_features()
 
-#     # Se calculan los roles para cada nodo
-#     role_extractor = RoleExtractor(n_roles)
-#     role_extractor.extract_role_factors(features)
-#     node_roles = role_extractor.roles
-#     print('\nNode role membership by percentage:')
-#     print(role_extractor.role_percentage.round(2))
-#     return node_roles
+    # Se calculan los roles para cada nodo
+    role_extractor = RoleExtractor(n_roles)
+    role_extractor.extract_role_factors(features)
+    node_roles = role_extractor.roles
+    print('\nNode role membership by percentage:')
+    print(role_extractor.role_percentage.round(2))
+    return node_roles
 
 # def extraer_puentes_globales(grafo):
 #     return list(nx.bridges(grafo))

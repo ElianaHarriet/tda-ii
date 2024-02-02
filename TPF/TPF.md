@@ -488,8 +488,6 @@ Para la red de personajes selectos se obtuvieron mejoras para el caso de Prefere
 
 ## análisis siguendo x personajes
 
-## Comparaciones con Erdös-Rényi y Preferential Attachment
-
 ## Epidemias en got -> enfermedades, lineas de pensamiento, etc
 
 ## deteccion de brotes ??
