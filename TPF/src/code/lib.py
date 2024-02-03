@@ -36,3 +36,10 @@ def get_groups(path):
             group = group.replace("\n", "")
             groups[group] = groups.get(group, []) + [name]
     return groups
+
+def save_status(result_g_path, status, col_name):
+    with open(result_g_path, 'w', newline='') as csvfile:
+        writer = csv.DictWriter(csvfile, fieldnames=["Id", col_name], delimiter=",")
+        writer.writeheader()
+        for node, stat in status.items():
+            writer.writerow({"Id": node, col_name: stat})

@@ -480,6 +480,79 @@ Distancia coseno entre la red original y el modelado de Preferential Attachment:
 
 Para la red de personajes selectos se obtuvieron mejoras para el caso de Preferential Attachment, reduciendo la distancia coseno al grafo original, en cuanto a Erdös-Rényi se obtuvieron distancias mayores, lo cual indica que esta forma de simulación es menos eficaz para la red. De esto se puede concluir que dentro de los personajes más importantes, los personajes de mayor importancia (con mayor cantidad de conexiones) son más propensos a generar nuevas conexiones a lo largo de la historia.
 
+## Epidemias en Game of Thrones
+
+En la saga de Game of Thrones hay varias enfermedades que afectan a los personajes, en particular, hay dos enfermedades que afectan a la población de Westeros: la viruela y la peste gris (o psoriagris). La viruela es una enfermedad que afecta a la población de Desembarco del Rey, mientras que la peste gris afecta a la población de Meereen.  
+En ambos casos son enfermedades que aparecen como temáticas secundarias, resultándo sólo preocupaciones para los personajes principales de la trama. De hecho, el personaje más importante en padecer psoriagris es Shireen Baratheon, la hija de Stannis Baratheon, pero es un caso en donde la enfermedad se detuvo y no avanzó a mayores.  
+Dada la ausencia de una enfermedad de alta importancia en la trama, se decidió analizar cómo sería el comportamiento de la red ante una epidemia. Para ello se setearon las siguientes variables:  
+
+- Probabilidad de infectarse ante un contacto con un infectado: 2.5%
+- Probabilidad de recuperarse: 0.5%
+- Probabilidad de morir: 0.25%
+- Se asume que una vez recuperado, el personaje no puede volver a infectarse
+- Se asume que una vez muerto, el personaje no puede seguir infectando a otros
+- Se tomó una cantidad de iteraciones máxima de 100, frenando la simulación en este punto o al no haber más infectados (lo que ocurra primero)
+
+Para la simulación se tomaron 4 personajes ejemplo: Arya Stark, Tyrion Lannister, Daenerys Targaryen y Varys. Los primeros dos son personajes que se mueven mucho a lo largo de la historia, Tyrion encontrándose con personajes de mayor renombre, mientras que Arya va disminuyendo la importancia de sus conexiones a lo largo de la saga. Daenerys es un personaje que se encuentra en un entorno muy particular, en donde no se encuentra con personajes de Westeros, pero sí hay algunos que se mueven entre ambos continentes, pero mitiendo así la transmisión de la epidemia. Varys no se mueve mucho a lo largo de la historia, además no tiene tanto renombre como los tres personajes anteriores, pero se encuentra en contacto con personajes de alta importancia en Desembarco del Rey, lo cual lo hace un personaje de interés para la simulación.  
+
+> **Nota:**
+> La simulación se hizo sobre una red que acumula todas las interacciones de los personajes a lo largo de la historia, por lo que asume a todos los vecinos de un personaje como posibles para infectar. Lo cual no es del todo correcto dado que hay personajes con contactos en puntas muy diferentes del mapa.  
+> Entonces se puede decir que la aproximación puede funcionar si se toma a la epidemia como una enfermedad que se tiene de por vida y da tiempo a que los personajes se muevan lo suficiente como para que los nuevos infectados se den en un entorno posible.  
+> Por esto mismo se eligieron personajes que se mueven lo suficiente a lo largo de la historia, y además una tasa de recuperación y muerte baja, para que la enfermedad no se detenga con facilidad.
+
+A continuación se muestran los resultados obtenidos para la simulación de la epidemia:  
+
+**Arya Stark**  
+![Epidemia caso Arya Stark](src/images/epidemy-arya.png)
+Métricas al momento de la captura:  
+- Infectados: 53.52%
+- Recuperados: 23.12%
+- Muertos: 11.93%
+- No infectados: 11.43%
+
+**Tyrion Lannister**  
+![Epidemia caso Tyrion Lannister](src/images/epidemy-tyrion.png)
+Métricas al momento de la captura:
+- Infectados: 48.37%
+- Recuperados: 26.63%
+- Muertos: 12.44%
+- No infectados: 12.56%
+
+**Daenerys Targaryen**  
+![Epidemia caso Daenerys Targaryen](src/images/epidemy-daenerys.png)
+Métricas al momento de la captura:
+- Infectados: 48.49%
+- Recuperados: 24.62%
+- Muertos: 14.7%
+- No infectados: 12.19%
+
+**Varys**  
+![Epidemia caso Varys](src/images/epidemy-varys.png)
+Métricas al momento de la captura:
+- Infectados: 49.37%
+- Recuperados: 25.25%
+- Muertos: 13.07%
+- No infectados: 12.31%
+
+De estos resultados se puede ver cómo la enfermedad se propaga con facilidad, sin haber mayores diferencias entre los personajes. Esto se debe a que la enfermedad se propaga con facilidad, y que además la red tiene un diámetro bajo. De esta forma, la enfermedad puede llegar con facilidad a un personaje con alta cantidad de conexiones y desde ahí propagarse con facilidad.  
+
+Para sacar algo de mayor provecho de la simulación, se decidió analizar un caso en donde la enfermedad se detiene con facilidad (ya sea muriendo o recuperándose) y tomar personajes más variados. De esta forma se eligieron los personajes:
+
+- Tyrion Lannister
+- Varys
+- Daenerys Targaryen
+- Obara Sand
+
+Y se setearon las siguientes variables:
+
+- Probabilidad de infectarse ante un contacto con un infectado: 2.5%
+- Probabilidad de recuperarse: 5%
+- Probabilidad de morir: 2.5%
+- Se asume que una vez recuperado, el personaje no puede volver a infectarse
+- Se asume que una vez muerto, el personaje no puede seguir infectando a otros
+- Se tomó una cantidad de iteraciones máxima de 20, frenando la simulación en este punto o al no haber más infectados (lo que ocurra primero)
+
+
 # ***Beep boop, estoy trabajando en esto*** 👇🏻
 
 ## analizar la red según los libros (ver la oportunidad de comparar la evolución entre distintos libros)
