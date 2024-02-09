@@ -3,8 +3,8 @@
 import lib as lib
 from scipy.spatial import distance
 
-OPCIONES = {"TODO": ("TPF/src/asoiaf-all-edges.csv", "weight"),
-            "SELECTOS": ("TPF/src/asoiaf-selected.csv", "Weight")}
+OPCIONES = {"TODO": ("TPF/src/csvs/asoiaf-all-edges.csv", "weight"),
+            "SELECTOS": ("TPF/src/csvs/asoiaf-selected.csv", "Weight")}
 
 GRAFO_CSV, PESO_ARISTA = OPCIONES["SELECTOS"] # Elegir a conveniencia
 SEP = ','

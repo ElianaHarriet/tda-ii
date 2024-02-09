@@ -1,7 +1,7 @@
 import lib
 import networkx as nx
 
-GRAPH_CSV_PATH = "TPF/src/asoiaf-all-edges.csv"
+GRAPH_CSV_PATH = "TPF/src/csvs/asoiaf-all-edges.csv"
 COLORS_PATH = "TPF/src/gephi/colors_by_clusters.txt"
 
 def get_group_assignments(groups):

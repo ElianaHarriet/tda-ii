@@ -1,6 +1,6 @@
 import lib
 
-GRAPH_CSV_PATH = "TPF/src/asoiaf-all-edges.csv"
+GRAPH_CSV_PATH = "TPF/src/csvs/asoiaf-all-edges.csv"
 COLORS_PATH = "TPF/src/gephi/colors_by_clusters.txt"
 TOP_NODES = 10
 

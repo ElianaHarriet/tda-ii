@@ -552,6 +552,67 @@ Y se setearon las siguientes variables:
 - Se asume que una vez muerto, el personaje no puede seguir infectando a otros
 - Se tomó una cantidad de iteraciones máxima de 20, frenando la simulación en este punto o al no haber más infectados (lo que ocurra primero)
 
+A continuación se muestran los resultados obtenidos:  
+
+**Tyrion Lannister**
+![Epidemia caso Tyrion Lannister](src/images/epidemy2-tyrion.png)
+Métricas al momento de la captura:  
+- Infectados: 21.36%
+- Recuperados: 17.34%
+- Muertos: 7.79%
+- No infectados: 53.51%
+
+Además, si se saca a los no infectados se obtiene:
+- Infectados: 45.95%
+- Recuperados: 37.3%
+- Muertos: 16.75%
+
+**Varys**
+![Epidemia caso Varys](src/images/epidemy2-varys.png)
+Métricas al momento de la captura:  
+- Infectados: 20.48%
+- Recuperados: 12.31%
+- Muertos: 6.03%
+- No infectados: 61.18%
+
+Además, si se saca a los no infectados se obtiene:
+- Infectados: 52.75%
+- Recuperados: 31.72%
+- Muertos: 15.53%
+
+**Daenerys Targaryen**
+![Epidemia caso Daenerys Targaryen](src/images/epidemy2-daenerys.png)
+Métricas al momento de la captura:
+- Infectados: 18.22%
+- Recuperados: 12.56%
+- Muertos: 4.52%
+- No infectados: 64.7%
+
+Además, si se saca a los no infectados se obtiene:
+- Infectados: 51.6%
+- Recuperados: 35.59%
+- Muertos: 12.81%
+
+**Obara Sand**
+![Epidemia caso Obara Sand](src/images/epidemy2-obara.png)
+Métricas al momento de la captura:
+- Infectados: 17.71%
+- Recuperados: 3.89%
+- Muertos: 1.88%
+- No infectados: 76.52%
+
+Además, si se saca a los no infectados se obtiene:
+- Infectados: 75.4%
+- Recuperados: 16.58%
+- Muertos: 8.02%
+
+De estos resultados se puede ver cómo el desarrollo de la epidemia varía según el personaje inicial, siendo determinante para la velocidad de la extensión de la misma. Además, notar que en caso de alcanzar en algún punto a un personaje de importancia, la velocidad de propagación de la enfermedad se dispara, por lo que no sólo es importante el personaje inicial, sino también el entorno en el que se encuentra. Para validar esto último se puede ver que se obtuvieron resultados similares para Daenerys y Varys, siendo Daenerys un personaje con mayor grado que Varys, pero estando algo más apartada del nucleo de Desembarco del Rey (ciudad en donde se encuentra gran parte de los personajes con mayor cantidad de conexiones).  
+Los cambios en el avance de la epidemia según el personaje seleccionado son dos:  
+- **Velocidad de infección**: Se puede ver cómo la cantidad de no infectados varía en los casos Tyrion, Daenerys-Varys, Obara. Esto se debe a la cantidad de conexiones que la enfermedad puede encontrar, es decir, las oportunidades de la misma para expandirse.
+- **Desarrollo de la enfermedad por sobre cada personaje**: Se puede ver cómo la cantidad de recuperados y muertos varía en los distintos casos. Esto se debe al tiempo que tiene la enfermedad para evolucionar en cada personaje y finalmente el mismo recuperarse o morir. En los casos en donde la enfermedad es más lenta, se puede ver que la cantidad de recuperados o muertos en función de los infectados es menor debido a que los contagios son más recientes.
+
+Estas situaciones permiten que se den escenarios completamente diferentes en la historia. En uno en donde la enfermedad se propaga con facilidad será crucial encontrar una forma de detenerla cuanto antes, pero se podrá conocer con facilidad el caracter de la misma (tiempo de desarrollo hasta la recuperación/muerte y probabilidad de recuperación/muerte). Mientras que en el otro caso, la enfermedad se propaga con mayor dificultad, pero es necesario esperar mayor tiempo para conocer el caracter de la misma.  
+Esto incluiría variantes a la historia, en donde una enfermedad con dificultades para expandirse sobre la red se ve favorable, pero recaería en los personajes decidir si arriesgar o no tiempo para conocer el caracter de cómo evolucionará, por el otro lado, una enfermedad que se propaga con facilidad sobre la red requerirá de una rápida respuesta para evitar que se propague con facilidad, pero se podrá conocer con facilidad el caracter de la misma (con el costo humano que esto conlleva).  
 
 # ***Beep boop, estoy trabajando en esto*** 👇🏻
 

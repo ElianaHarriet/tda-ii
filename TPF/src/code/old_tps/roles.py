@@ -2,8 +2,8 @@
 import lib
 
 
-OPCIONES = {"TODO": ("TPF/src/asoiaf-all-edges.csv", "weight"),
-            "SELECTOS": ("TPF/src/asoiaf-selected.csv", "Weight")}
+OPCIONES = {"TODO": ("TPF/src/csvs/asoiaf-all-edges.csv", "weight"),
+            "SELECTOS": ("TPF/src/csvs/asoiaf-selected.csv", "Weight")}
 
 OPCION = "SELECTOS" # Elegir a conveniencia
 GRAFO_CSV, PESO_ARISTA = OPCIONES[OPCION]

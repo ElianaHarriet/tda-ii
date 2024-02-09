@@ -2,7 +2,7 @@ import statistics
 # import networkx as nx
 import lib
 
-GRAPH_CSV_PATH = "TPF/src/asoiaf-all-edges.csv"
+GRAPH_CSV_PATH = "TPF/src/csvs/asoiaf-all-edges.csv"
 
 def degrees_quantity(graph):
     degrees = {}

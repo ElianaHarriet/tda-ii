@@ -6,9 +6,9 @@ INFECTION_PROB = 0.025
 RECOVERY_PROB = 0.05
 DYING_PROB = 0.025
 
-GRAPH_CSV_PATH = "TPF/src/asoiaf-all-edges.csv"
+GRAPH_CSV_PATH = "TPF/src/csvs/asoiaf-all-edges.csv"
 PARAMS = f"{INITIAL_NODE}|I{INFECTION_PROB}|R{RECOVERY_PROB}|D{DYING_PROB}"
-RESULT_PATH = f"TPF/src/propagation_result({PARAMS}).csv"
+RESULT_PATH = f"TPF/src/csvs/propagation_result({PARAMS}).csv"
 COL_NAME = "Status"
 
 SUCEPTIBLE = "Suceptible"
