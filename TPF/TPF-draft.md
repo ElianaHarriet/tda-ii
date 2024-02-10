@@ -614,6 +614,103 @@ Los cambios en el avance de la epidemia según el personaje seleccionado son dos
 Estas situaciones permiten que se den escenarios completamente diferentes en la historia. En uno en donde la enfermedad se propaga con facilidad será crucial encontrar una forma de detenerla cuanto antes, pero se podrá conocer con facilidad el caracter de la misma (tiempo de desarrollo hasta la recuperación/muerte y probabilidad de recuperación/muerte). Mientras que en el otro caso, la enfermedad se propaga con mayor dificultad, pero es necesario esperar mayor tiempo para conocer el caracter de la misma.  
 Esto incluiría variantes a la historia, en donde una enfermedad con dificultades para expandirse sobre la red se ve favorable, pero recaería en los personajes decidir si arriesgar o no tiempo para conocer el caracter de cómo evolucionará, por el otro lado, una enfermedad que se propaga con facilidad sobre la red requerirá de una rápida respuesta para evitar que se propague con facilidad, pero se podrá conocer con facilidad el caracter de la misma (con el costo humano que esto conlleva).  
 
+## Predicción de interacciones
+
+A continuación se utilizará un plugin de Gephi para predecir interacciones entre los personajes. La idea es ver cómo podría comportarse la red en un futuro mediante la predicción de aristas en la red. Para esto, se utilizó la red de personajes selectos para obtener sólo aristas de relevancia.  
+Respecto a los algoritmos a utilizar, se usaron tanto _Preferential Attachment_ como _Common Neighbors_ para ver cómo se comportan los algoritmos en la red. La red tiene 537 aristas, y se crearán 50 aristas más (aproximadamente el 10% de las aristas actuales) para ver cómo se comportan los algoritmos.  
+
+**Common Neighbors**  
+Se crearon las siguientes aristas:
+- Arya-Stark - Stannis-Baratheon  
+- Bran-Stark - Stannis-Baratheon  
+- Bran-Stark - Jaime-Lannister  
+- Brienne-of-Tarth - Eddard-Stark  
+- Brienne-of-Tarth - Petyr-Baelish  
+- Arya-Stark - Brienne-of-Tarth  
+- Arya-Stark - Renly-Baratheon  
+- Rodrik-Cassel - Stannis-Baratheon  
+- Bran-Stark - Tywin-Lannister  
+- Jon-Snow - Petyr-Baelish  
+- Bran-Stark - Brienne-of-Tarth  
+- Catelyn-Stark - Pycelle  
+- Pycelle - Robb-Stark  
+- Jon-Arryn - Sansa-Stark  
+- Robert-Baratheon - Theon-Greyjoy  
+- Gregor-Clegane - Renly-Baratheon  
+- Petyr-Baelish - Theon-Greyjoy  
+- Cersei-Lannister - Theon-Greyjoy  
+- Joffrey-Baratheon - Theon-Greyjoy  
+- Sansa-Stark - Theon-Greyjoy  
+- Brienne-of-Tarth - Theon-Greyjoy  
+- Renly-Baratheon - Theon-Greyjoy  
+- Jon-Snow - Renly-Baratheon  
+- Brienne-of-Tarth - Jon-Snow  
+- Jon-Snow - Tywin-Lannister  
+
+**Preferential Attachment**  
+Se crearon las siguientes aristas:
+- Arya-Stark - Stannis-Baratheon  
+- Robert-Baratheon - Theon-Greyjoy  
+- Jon-Snow - Tywin-Lannister  
+- Bran-Stark - Jaime-Lannister  
+- Bran-Stark - Stannis-Baratheon  
+- Bran-Stark - Tywin-Lannister  
+- Cersei-Lannister - Theon-Greyjoy  
+- Joffrey-Baratheon - Theon-Greyjoy  
+- Sansa-Stark - Theon-Greyjoy  
+- Jon-Snow - Petyr-Baelish  
+- Barristan-Selmy - Stannis-Baratheon  
+- Petyr-Baelish - Theon-Greyjoy  
+- Barristan-Selmy - Tywin-Lannister  
+- Barristan-Selmy - Robb-Stark  
+- Brienne-of-Tarth - Eddard-Stark  
+- Sandor-Clegane - Stannis-Baratheon  
+- Arya-Stark - Renly-Baratheon  
+- Arya-Stark - Barristan-Selmy  
+- Jon-Snow - Renly-Baratheon  
+- Barristan-Selmy - Jon-Snow  
+- Barristan-Selmy - Catelyn-Stark  
+- Barristan-Selmy - Bran-Stark  
+- Barristan-Selmy - Theon-Greyjoy  
+- Renly-Baratheon - Theon-Greyjoy  
+- Sandor-Clegane - Tywin-Lannister  
+
+Algunas cosas a notar:
+- No se predijeron nuevos enlaces para Tyrion Lannister, lo cual podría indicar que el personaje ya tiene una cantidad de conexiones suficiente como para no necesitar más.
+- Se predijeron nuevas conexiones para personajes con una cantidad media de conexiones, lo cual indica que algunos personajes tienen lugar a seguir creciendo.
+- Se predijeron conexiones para personajes ya muertos, lo cual indica posibles caminos alternos que podría haber seguido la historia.
+
+Se puede ver como entre ambos algoritmos hay repeticiones, vamos a tomar esas repeticiones como medida de alta probabilidad que tal interacción ocurra en el futuro en la saga, las cuales son:
+- Arya-Stark - Stannis-Baratheon  
+- Bran-Stark - Stannis-Baratheon  
+- Bran-Stark - Jaime-Lannister  
+- Brienne-of-Tarth - Eddard-Stark  
+- Arya-Stark - Renly-Baratheon  
+- Bran-Stark - Tywin-Lannister  
+- Jon-Snow - Petyr-Baelish  
+- Robert-Baratheon - Theon-Greyjoy  
+- Petyr-Baelish - Theon-Greyjoy  
+- Cersei-Lannister - Theon-Greyjoy  
+- Joffrey-Baratheon - Theon-Greyjoy  
+- Sansa-Stark - Theon-Greyjoy  
+- Renly-Baratheon - Theon-Greyjoy  
+- Jon-Snow - Renly-Baratheon  
+- Jon-Snow - Tywin-Lannister  
+
+De estas conexiones vamos a eliminar las que contengan personajes muertos, ya que no tienen sentido en el contexto de la saga. Personajes muertos: Eddeard Stark, Robert Baratheon, Renly Baratheon, Tywin Lannister, Joffrey Baratheon. Stannis Baratheon no se encuentra en la lista de personajes muertos dado que su muerte no fue confirmada, por lo que podría hacer una reaparición.  
+- Arya-Stark - Stannis-Baratheon  
+- Bran-Stark - Stannis-Baratheon  
+- Bran-Stark - Jaime-Lannister  
+- Jon-Snow - Petyr-Baelish  
+- Petyr-Baelish - Theon-Greyjoy  
+- Cersei-Lannister - Theon-Greyjoy  
+- Sansa-Stark - Theon-Greyjoy  
+
+Respecto al grupo de aristas **[Petyr-Baelish - Theon-Greyjoy | Cersei-Lannister - Theon-Greyjoy | Sansa-Stark - Theon-Greyjoy]**: El último status de Theon en la saga es como prisionero de Ramsay Bolton, por lo que podría ser utilizado para re-capturar a Sansa Stark. Con tal fin podría haber una alianza entre Petyr Baelish y Cersei Lannister para recuperar a Sansa, ya que ambos tienen intereses en la misma y entonces interactuar con Theon para tal fin.  
+
+El resto de aristas no tienen un contexto claro para que ocurran dado que en muchos casos son personajes que se encuentran lejanos, pero podrían ser interesantes de ver cómo se desarrollan en la historia. De entre ellos sería curiosa una interacción entre Bran Stark y Jaime Lannister, ya que ambos tienen una historia en común, pero no se encuentran desde el primer libro.  
+
+
 # ***Beep boop, estoy trabajando en esto*** 👇🏻
 
 ## analizar la red según los libros (ver la oportunidad de comparar la evolución entre distintos libros)
@@ -622,12 +719,8 @@ Esto incluiría variantes a la historia, en donde una enfermedad con dificultade
 
 ## análisis siguendo x personajes
 
-## Epidemias en got -> enfermedades, lineas de pensamiento, etc
-
-## deteccion de brotes ??
-
-## epidemias/brotes/otro como deteccion de compartir algo aka aliarse
-
-## evolución de la red -> nuevos enlaces
+## análisis de roles de los personajes
 
 ## cosas de los últimos temas
+
+## agregar aclaraciones de los colores en los grafos
