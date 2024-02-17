@@ -617,9 +617,9 @@ Esto incluiría variantes a la historia, en donde una enfermedad con dificultade
 ## Predicción de interacciones
 
 A continuación se utilizará un plugin de Gephi para predecir interacciones entre los personajes. La idea es ver cómo podría comportarse la red en un futuro mediante la predicción de aristas en la red. Para esto, se utilizó la red de personajes selectos para obtener sólo aristas de relevancia.  
-Respecto a los algoritmos a utilizar, se usaron tanto _Preferential Attachment_ como _Common Neighbors_ para ver cómo se comportan los algoritmos en la red. La red tiene 537 aristas, y se crearán 50 aristas más (aproximadamente el 10% de las aristas actuales) para ver cómo se comportan los algoritmos.  
+Respecto a los algoritmos a utilizar, se usaron tanto _Preferential Attachment_ como _Common Neighbours_ para ver cómo se comportan los algoritmos en la red. La red tiene 537 aristas, y se crearán 50 aristas más (aproximadamente el 10% de las aristas actuales) para ver cómo se comportan los algoritmos.  
 
-**Common Neighbors**  
+**Common Neighbours**  
 Se crearon las siguientes aristas:
 - Arya-Stark - Stannis-Baratheon  
 - Bran-Stark - Stannis-Baratheon  
@@ -711,16 +711,11 @@ Respecto al grupo de aristas **[Petyr-Baelish - Theon-Greyjoy | Cersei-Lannister
 El resto de aristas no tienen un contexto claro para que ocurran dado que en muchos casos son personajes que se encuentran lejanos, pero podrían ser interesantes de ver cómo se desarrollan en la historia. De entre ellos sería curiosa una interacción entre Bran Stark y Jaime Lannister, ya que ambos tienen una historia en común, pero no se encuentran desde el primer libro.  
 
 
-# ***Beep boop, estoy trabajando en esto*** 👇🏻
+<!-- # ***Beep boop, estoy trabajando en esto*** 👇🏻 -->
 
-## analizar la red según los libros (ver la oportunidad de comparar la evolución entre distintos libros)
+<!-- ## analizar la red según los libros (ver la oportunidad de comparar la evolución entre distintos libros) -->
 
-## análisis por dentro de un cluster
+<!-- ## análisis siguendo x personajes -->
 
-## análisis siguendo x personajes
+<!-- ## análisis por dentro de un cluster -->
 
-## análisis de roles de los personajes
-
-## cosas de los últimos temas
-
-## agregar aclaraciones de los colores en los grafos
